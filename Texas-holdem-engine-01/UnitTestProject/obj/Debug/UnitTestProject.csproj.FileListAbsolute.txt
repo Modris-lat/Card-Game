@@ -1,0 +1,16 @@
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\UnitTestProject.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\UnitTestProject.pdb
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Texas-holdem-engine-01.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Texas-holdem-engine-01.pdb
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\obj\Debug\UnitTestProject.csprojAssemblyReference.cache
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\obj\Debug\UnitTestProject.csproj.CoreCompileInputs.cache
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\obj\Debug\UnitTestProject.csproj.CopyComplete
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\UnitTestProject\obj\Debug\UnitTestProject.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Texas-holdem-engine-01", "Texas-holdem-engine-01\Texas-holdem-engine-01.csproj", "{DF433789-6AFD-44FD-AF59-232AA95EFDCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{2A6F2A89-DAB9-49BD-9F9B-64FA02E35388}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF433789-6AFD-44FD-AF59-232AA95EFDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF433789-6AFD-44FD-AF59-232AA95EFDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF433789-6AFD-44FD-AF59-232AA95EFDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF433789-6AFD-44FD-AF59-232AA95EFDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6F2A89-DAB9-49BD-9F9B-64FA02E35388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6F2A89-DAB9-49BD-9F9B-64FA02E35388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6F2A89-DAB9-49BD-9F9B-64FA02E35388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6F2A89-DAB9-49BD-9F9B-64FA02E35388}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB8CDF05-94F2-479B-BA7B-71E0CD35C88A}
+	EndGlobalSection
+EndGlobal

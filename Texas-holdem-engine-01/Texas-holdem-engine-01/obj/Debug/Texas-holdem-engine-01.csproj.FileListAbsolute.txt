@@ -1,0 +1,6 @@
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\Texas-holdem-engine-01\bin\Debug\Texas-holdem-engine-01.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\Texas-holdem-engine-01\bin\Debug\Texas-holdem-engine-01.pdb
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\Texas-holdem-engine-01\obj\Debug\Texas-holdem-engine-01.csprojAssemblyReference.cache
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\Texas-holdem-engine-01\obj\Debug\Texas-holdem-engine-01.csproj.CoreCompileInputs.cache
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\Texas-holdem-engine-01\obj\Debug\Texas-holdem-engine-01.dll
+C:\Users\Modris\Desktop\IT\Codelex\CardGame\Card-Game\Texas-holdem-engine-01\Texas-holdem-engine-01\obj\Debug\Texas-holdem-engine-01.pdb
