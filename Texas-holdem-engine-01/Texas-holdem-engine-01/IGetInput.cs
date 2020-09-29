@@ -8,5 +8,6 @@ namespace Texas_holdem_engine_01
 {
     public interface IGetInput
     {
+        IList<string>GetInput(string input);
     }
 }
