@@ -8,6 +8,7 @@ namespace Texas_holdem_engine_01
 {
     public interface ITable
     {
-        IList<string> GetCardsOnTable();
+        void GetCardsOnTable();
+        IList<string> ShowCardsOnTable();
     }
 }

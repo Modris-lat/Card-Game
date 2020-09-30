@@ -9,25 +9,30 @@ namespace Texas_holdem_engine_01
     public class Table: ITable
     {
         private IGetInput Input;
+        private List<string> CardsListOnTable;
 
         public Table(IGetInput input)
         {
             Input = input;
+            CardsListOnTable = new List<string>(){};
         }
-        public IList<string> GetCardsOnTable()
+        public void GetCardsOnTable()
         {
             string str = Input.ShowInput()[0];
-            var cardList = new List<string>() {};
             for (int i = 0; i < str.Length; i++)
             {
                 if (i % 2 != 0)
                 {
                     string card = string.Empty;
                     card = str.Substring(i-1, 2);
-                    cardList.Add(card);
+                    CardsListOnTable.Add(card);
                 }
             }
-            return cardList;
+        }
+
+        public IList<string> ShowCardsOnTable()
+        {
+            return CardsListOnTable;
         }
     }
 }
