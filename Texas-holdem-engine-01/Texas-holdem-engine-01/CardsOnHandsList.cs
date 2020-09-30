@@ -20,7 +20,7 @@ namespace Texas_holdem_engine_01
             throw new NotImplementedException();
         }
 
-        public IEnumerable<string> ShowCardsOnHandsList()
+        public IEnumerable<Card> ShowCardsOnHandsList()
         {
             throw new NotImplementedException();
         }

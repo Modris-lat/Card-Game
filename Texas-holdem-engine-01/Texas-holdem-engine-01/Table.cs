@@ -9,12 +9,12 @@ namespace Texas_holdem_engine_01
     public class Table: ITable
     {
         private IGetInput Input;
-        private List<string> CardsListOnTable;
+        private List<Card> CardsListOnTable;
 
         public Table(IGetInput input)
         {
             Input = input;
-            CardsListOnTable = new List<string>(){};
+            CardsListOnTable = new List<Card>(){};
         }
         public void GetCardsOnTable()
         {
@@ -25,12 +25,12 @@ namespace Texas_holdem_engine_01
                 {
                     string card = string.Empty;
                     card = str.Substring(i-1, 2);
-                    CardsListOnTable.Add(card);
+                    CardsListOnTable.Add(new Card(card[0], card[1]));
                 }
             }
         }
 
-        public IList<string> ShowCardsOnTable()
+        public IList<Card> ShowCardsOnTable()
         {
             return CardsListOnTable;
         }
