@@ -47,7 +47,9 @@
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />
     <Compile Include="Interfaces\IGetInput.cs" />
     <Compile Include="InputCards.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Interfaces\ITable.cs" />
+    <Compile Include="OutputHandBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Table.cs" />
   </ItemGroup>

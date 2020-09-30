@@ -19,15 +19,7 @@ namespace Texas_holdem_engine_01
         public void GetCardsOnTable()
         {
             string str = Input.ShowInput()[0];
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (i % 2 != 0)
-                {
-                    string card = string.Empty;
-                    card = str.Substring(i-1, 2);
-                    CardsListOnTable.Add(new Card(card[0], card[1]));
-                }
-            }
+            CardsListOnTable = ExtractCards.ExtractListOfCards(str);
         }
 
         public IList<Card> ShowCardsOnTable()
