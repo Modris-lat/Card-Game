@@ -12,12 +12,13 @@ namespace UnitTestProject
 
         public InputTest()
         {
-            Input = new Input();
+            Input = new InputCards();
         }
         [TestMethod]
         public void GetInput()
         {
-            var list = Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
+            Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
+            var list = Input.ShowInput();
             Assert.IsTrue(string.Join(",",list) == "4cKs4h8s7s,Ad4s,Ac4d,As9s,KhKd,5d6d");
         }
     }

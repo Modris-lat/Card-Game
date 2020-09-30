@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Texas_holdem_engine_01
 {
-    public interface IGetInput
+    public interface ITable
     {
-        void GetInput(string input);
-        IList<string> ShowInput();
+        IList<string> GetCardsOnTable();
     }
 }
