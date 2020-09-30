@@ -9,6 +9,6 @@ namespace Texas_holdem_engine_01
     public interface ICardsOnHandsList
     {
         void AddCardsToHandsList();
-        IEnumerable<Card> ShowCardsOnHandsList();
+        Dictionary<int, List<Card>> ShowCardsOnHandsList();
     }
 }

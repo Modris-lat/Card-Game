@@ -8,21 +8,29 @@ namespace Texas_holdem_engine_01
 {
     public class CardsOnHandsList: ICardsOnHandsList
     {
-        private List<string> CardsOnHands;
+        private Dictionary<int, List<Card>> CardsOnHands;
+        private IGetInput Input;
 
-        public CardsOnHandsList()
+        public CardsOnHandsList(IGetInput input)
         {
-            CardsOnHands = new List<string>(){};
+            CardsOnHands = new Dictionary<int, List<Card>>(){};
+            Input = input;
         }
 
         public void AddCardsToHandsList()
         {
-            throw new NotImplementedException();
+            var list = Input.ShowInput();
+            list.RemoveAt(0);
+            for (int i = 0; i < list.Count; i++)
+            {
+                var hand = list[i];
+                CardsOnHands.Add(i, ExtractCards.ExtractListOfCards(hand));
+            }
         }
 
-        public IEnumerable<Card> ShowCardsOnHandsList()
+        public Dictionary<int, List<Card>> ShowCardsOnHandsList()
         {
-            throw new NotImplementedException();
+            return CardsOnHands;
         }
     }
 }

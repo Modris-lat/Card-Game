@@ -3,5 +3,7 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.InputTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.TableTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Add_Cards_To_List&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Add_Cards_In_First_Hand&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
