@@ -11,6 +11,7 @@ namespace Texas_holdem_engine_01
     {
         private ITable Table;
         private ICardsOnHandsList CardsOnHands;
+        string OutputString;
 
         public OutputHandBlock(ITable table, ICardsOnHandsList cardsOnHandsList)
         {
@@ -19,12 +20,12 @@ namespace Texas_holdem_engine_01
         }
         public string Output()
         {
-            throw new NotImplementedException();
+            return OutputString;
         }
 
         public void GetOutput()
         {
-            throw new NotImplementedException();
+            var strongestHand = CalculateHandValues.CalculateCardsValues(Table.ShowCardsOnTable(), CardsOnHands.ShowCardsOnHandsList());
         }
     }
 }

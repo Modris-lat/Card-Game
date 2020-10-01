@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculateHandValues.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardsOnHandsList.cs" />
     <Compile Include="ExtractCards.cs" />

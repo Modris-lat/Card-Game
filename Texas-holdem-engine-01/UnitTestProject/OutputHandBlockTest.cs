@@ -24,10 +24,17 @@ namespace UnitTestProject
         public void Valid_Output_Five_Hands()
         {
             Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            Assert.IsTrue(Output.Output() == "Ac4d=Ad4s 5d6d As9s KhKd");
         }
+        [TestMethod]
         public void Valid_Output_Two_Hands()
         {
             Input.GetInput("2h3h4h5d8d KdKs 9hJh");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            Assert.IsTrue(Output.Output() == "KdKs 9hJh");
         }
     }
 }
