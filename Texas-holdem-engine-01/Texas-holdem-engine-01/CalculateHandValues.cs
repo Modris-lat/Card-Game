@@ -9,7 +9,7 @@ namespace Texas_holdem_engine_01
 {
     public class CalculateHandValues
     {
-        public static IList<Card> CalculateCardsValues(IList<Card> table, Dictionary<int, List<Card>> hands)
+        public static (int, IList<Card>) CalculateCardsValues(IList<Card> table, Dictionary<int, List<Card>> hands)
         {
             throw new NotImplementedException();
         }

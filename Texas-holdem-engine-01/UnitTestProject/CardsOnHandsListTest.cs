@@ -43,5 +43,13 @@ namespace UnitTestProject
                           && CardsOnHands.ShowCardsOnHandsList()[4][1].Rank == '6'
                           && CardsOnHands.ShowCardsOnHandsList()[4][1].Suit == 'd');
         }
+        [TestMethod]
+        public void Remove_Hand()
+        {
+            Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
+            CardsOnHands.AddCardsToHandsList();
+            CardsOnHands.RemoveHand(0);
+            Assert.IsTrue(CardsOnHands.ShowCardsOnHandsList().Count == 4);
+        }
     }
 }

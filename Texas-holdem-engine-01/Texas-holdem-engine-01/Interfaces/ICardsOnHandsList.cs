@@ -10,5 +10,6 @@ namespace Texas_holdem_engine_01
     {
         void AddCardsToHandsList();
         Dictionary<int, List<Card>> ShowCardsOnHandsList();
+        void RemoveHand(int number);
     }
 }

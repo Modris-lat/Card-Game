@@ -32,5 +32,10 @@ namespace Texas_holdem_engine_01
         {
             return CardsOnHands;
         }
+
+        public void RemoveHand(int number)
+        {
+            CardsOnHands.Remove(number);
+        }
     }
 }

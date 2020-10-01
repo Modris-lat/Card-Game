@@ -11,21 +11,32 @@ namespace Texas_holdem_engine_01
     {
         private ITable Table;
         private ICardsOnHandsList CardsOnHands;
-        string OutputString;
+        private List<string> orderOfCards;
 
         public OutputHandBlock(ITable table, ICardsOnHandsList cardsOnHandsList)
         {
             Table = table;
             CardsOnHands = cardsOnHandsList;
+            orderOfCards = new List<string>();
         }
         public string Output()
         {
-            return OutputString;
+            return string.Join(" ", CardsOnHands);
         }
 
         public void GetOutput()
         {
-            var strongestHand = CalculateHandValues.CalculateCardsValues(Table.ShowCardsOnTable(), CardsOnHands.ShowCardsOnHandsList());
+            while (CardsOnHands.ShowCardsOnHandsList().Count > 0)
+            {
+                var strongestHand = CalculateHandValues.CalculateCardsValues(Table.ShowCardsOnTable(), CardsOnHands.ShowCardsOnHandsList());
+                var strongestCards = strongestHand.Item2;
+                for (int i = 0; i < strongestCards.Count; i++)
+                {
+                    orderOfCards.Add(string.Concat(strongestCards[i].Rank.ToString(), strongestCards[i].Suit.ToString()));
+                }
+
+                CardsOnHands.RemoveHand(strongestHand.Item1);
+            }
         }
     }
 }
