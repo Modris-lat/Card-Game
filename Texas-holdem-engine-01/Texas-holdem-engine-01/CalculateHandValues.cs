@@ -24,6 +24,15 @@ namespace Texas_holdem_engine_01
                 }
 
                 item.HighCard = CheckHighCard.HighestCard(hand);
+                int pairs = CheckPairs.CheckForPair(hand);
+                if (pairs == 1)
+                {
+                    item.Pair = true;
+                }
+                else if (pairs == 2)
+                {
+                    item.TwoPair = true;
+                }
             }
             throw new NotImplementedException();
         }
