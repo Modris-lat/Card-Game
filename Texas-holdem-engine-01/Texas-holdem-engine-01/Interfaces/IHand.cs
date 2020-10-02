@@ -18,6 +18,6 @@ namespace Texas_holdem_engine_01.Interfaces
         bool ThreeOfKind { get; set; }
         bool TwoPair { get; set; }
         bool Pair { get; set; }
-        bool HighCard { get; set; }
+        int HighCard { get; set; }
     }
 }

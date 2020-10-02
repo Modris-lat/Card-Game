@@ -19,7 +19,7 @@ namespace Texas_holdem_engine_01
         public bool ThreeOfKind { get; set; }
         public bool TwoPair { get; set; }
         public bool Pair { get; set; }
-        public bool HighCard { get; set; }
+        public int HighCard { get; set; }
 
         public Hand()
         {

@@ -45,6 +45,8 @@
     <Compile Include="CalculateHandValues.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardsOnHandsList.cs" />
+    <Compile Include="Static\CheckFlush.cs" />
+    <Compile Include="Static\CheckHighCard.cs" />
     <Compile Include="Static\ExtractCards.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />
