@@ -9,5 +9,10 @@
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.OutputHandBlockTest.Valid_Output_Five_Hands&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.OutputHandBlockTest.Valid_Output_Two_Hands&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Remove_Hand&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_Id&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_List_Count&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_List_Items&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_Hand_Value&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

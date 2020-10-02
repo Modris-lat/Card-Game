@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Texas_holdem_engine_01.Interfaces;
 
 namespace Texas_holdem_engine_01
 {
     public class CardsOnHandsList: ICardsOnHandsList
     {
-        private Dictionary<int, List<Card>> CardsOnHands;
+        private List<IHand> CardsOnHands;
         private IGetInput Input;
 
         public CardsOnHandsList(IGetInput input)
         {
-            CardsOnHands = new Dictionary<int, List<Card>>(){};
+            CardsOnHands = new List<IHand>(){};
             Input = input;
         }
 
@@ -24,18 +25,19 @@ namespace Texas_holdem_engine_01
             for (int i = 0; i < list.Count; i++)
             {
                 var hand = list[i];
-                CardsOnHands.Add(i, ExtractCards.ExtractListOfCards(hand));
+                var listOfCardsInHand = ExtractCards.ExtractListOfCards(hand);
+                CardsOnHands.Add(new Hand(i, listOfCardsInHand));
             }
         }
 
-        public Dictionary<int, List<Card>> ShowCardsOnHandsList()
+        public List<IHand> ShowCardsOnHandsList()
         {
             return CardsOnHands;
         }
 
-        public void RemoveHand(int number)
+        public void RemoveHand(IHand hand)
         {
-            CardsOnHands.Remove(number);
+            CardsOnHands.Remove(hand);
         }
     }
 }

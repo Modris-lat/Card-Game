@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardsOnHandsListTest.cs" />
+    <Compile Include="HandTest.cs" />
     <Compile Include="InputTest.cs" />
     <Compile Include="OutputHandBlockTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

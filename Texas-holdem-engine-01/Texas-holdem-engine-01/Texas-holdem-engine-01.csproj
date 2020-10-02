@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ICalculateHanValues.cs" />
     <Compile Include="CalculateHandValues.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardsOnHandsList.cs" />
-    <Compile Include="ExtractCards.cs" />
+    <Compile Include="Static\ExtractCards.cs" />
+    <Compile Include="Hand.cs" />
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />
     <Compile Include="Interfaces\IGetInput.cs" />
     <Compile Include="InputCards.cs" />
+    <Compile Include="Interfaces\IHand.cs" />
     <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Interfaces\ITable.cs" />
     <Compile Include="OutputHandBlock.cs" />

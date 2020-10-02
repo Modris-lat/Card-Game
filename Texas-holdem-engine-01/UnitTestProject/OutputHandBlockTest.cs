@@ -12,13 +12,15 @@ namespace UnitTestProject
         private ITable Table;
         private ICardsOnHandsList CardsOnHands;
         private IGetInput Input;
+        private ICalculateHandValues Calculate;
 
         public OutputHandBlockTest()
         {
             Input = new InputCards();
             Table = new Table(Input);
             CardsOnHands = new CardsOnHandsList(Input);
-            Output = new OutputHandBlock(Table, CardsOnHands);
+            Calculate = new CalculateHandValues();
+            Output = new OutputHandBlock(Table, CardsOnHands, Calculate);
         }
         [TestMethod]
         public void Valid_Output_Five_Hands()
