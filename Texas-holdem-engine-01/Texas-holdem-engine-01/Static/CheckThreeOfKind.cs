@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Texas_holdem_engine_01.Static
 {
-    public class CheckPairs
+    public class CheckThreeOfKind
     {
-        public static int CheckForPair(List<Card> cards)
+        public static int ThreeOfKind(List<Card> cards)
         {
             int countA = 0;
             int countK = 0;
@@ -23,39 +23,39 @@ namespace Texas_holdem_engine_01.Static
             int count4 = 0;
             int count3 = 0;
             int count2 = 0;
-            int pairCount = 0;
+            int threeCount = 0;
             foreach (var card in cards)
             {
                 if (card.Rank == '2')
                 {
                     count2++;
-                    if (count2 == 2 || count2 == 4)
+                    if (count2 == 3)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '3')
                 {
                     count3++;
-                    if (count3 == 2 || count3 == 4)
+                    if (count3 == 3)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '4')
                 {
                     count4++;
-                    if (count4 == 2 || count4 == 4)
+                    if (count4 == 3)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '5')
                 {
                     count5++;
-                    if (count5 == 2 || count5 == 4)
+                    if (count5 == 3)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '6')
@@ -63,7 +63,7 @@ namespace Texas_holdem_engine_01.Static
                     count6++;
                     if (count6 == 2 || count6 == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '7')
@@ -71,7 +71,7 @@ namespace Texas_holdem_engine_01.Static
                     count7++;
                     if (count7 == 2 || count7 == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '8')
@@ -79,7 +79,7 @@ namespace Texas_holdem_engine_01.Static
                     count8++;
                     if (count8 == 2 || count8 == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == '9')
@@ -87,7 +87,7 @@ namespace Texas_holdem_engine_01.Static
                     count9++;
                     if (count9 == 2 || count9 == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == 'T')
@@ -95,7 +95,7 @@ namespace Texas_holdem_engine_01.Static
                     countT++;
                     if (countT == 2 || countT == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == 'J')
@@ -103,7 +103,7 @@ namespace Texas_holdem_engine_01.Static
                     countJ++;
                     if (countJ == 2 || countJ == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == 'Q')
@@ -111,7 +111,7 @@ namespace Texas_holdem_engine_01.Static
                     countQ++;
                     if (countQ == 2 || countQ == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == 'K')
@@ -119,7 +119,7 @@ namespace Texas_holdem_engine_01.Static
                     countK++;
                     if (countK == 2 || countK == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
                 else if (card.Rank == 'A')
@@ -127,12 +127,12 @@ namespace Texas_holdem_engine_01.Static
                     countA++;
                     if (countA == 2 || countA == 4)
                     {
-                        pairCount++;
+                        threeCount++;
                     }
                 }
             }
 
-            return pairCount;
+            return threeCount;
         }
     }
 }

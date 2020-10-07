@@ -33,6 +33,12 @@ namespace Texas_holdem_engine_01
                 {
                     item.TwoPair = true;
                 }
+
+                int threeOfKind = CheckThreeOfKind.ThreeOfKind(hand);
+                if (threeOfKind == 1)
+                {
+                    item.ThreeOfKind = true;
+                }
             }
             throw new NotImplementedException();
         }
