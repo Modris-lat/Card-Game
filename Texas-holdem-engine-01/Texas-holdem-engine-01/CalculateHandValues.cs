@@ -17,9 +17,8 @@ namespace Texas_holdem_engine_01
                 var hand = new List<Card>(table);
                 hand.Add(item.GetCards()[0]);
                 hand.Add(item.GetCards()[1]);
-                item.Flush = CheckFlush.CheckIfFlush(hand);
-                
                 item.HighCard = CheckHighCard.HighestCard(hand);
+                item.Flush = CheckFlush.CheckIfFlush(hand);
                 int pairs = CheckPairs.CheckForPair(hand);
                 if (pairs == 1)
                 {
@@ -29,12 +28,12 @@ namespace Texas_holdem_engine_01
                 {
                     item.TwoPair = true;
                 }
-
                 int threeOfKind = CheckThreeOfKind.ThreeOfKind(hand);
                 if (threeOfKind == 1)
                 {
                     item.ThreeOfKind = true;
                 }
+                item.Straight = CheckStraight.CheckIfStraight(hand);
             }
             throw new NotImplementedException();
         }

@@ -48,6 +48,7 @@
     <Compile Include="Static\CheckFlush.cs" />
     <Compile Include="Static\CheckHighCard.cs" />
     <Compile Include="Static\CheckPairs.cs" />
+    <Compile Include="Static\CheckStraight.cs" />
     <Compile Include="Static\CheckThreeOfKind.cs" />
     <Compile Include="Static\ExtractCards.cs" />
     <Compile Include="Hand.cs" />

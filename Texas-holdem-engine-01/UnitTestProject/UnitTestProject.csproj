@@ -53,6 +53,7 @@
     <Compile Include="CheckFlushTest.cs" />
     <Compile Include="CheckHighestCardTest.cs" />
     <Compile Include="CheckPairsTest.cs" />
+    <Compile Include="CheckStraightTest.cs" />
     <Compile Include="CheckThreeOfKindTest.cs" />
     <Compile Include="HandTest.cs" />
     <Compile Include="InputTest.cs" />
