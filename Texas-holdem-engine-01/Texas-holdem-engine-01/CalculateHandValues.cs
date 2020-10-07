@@ -17,12 +17,8 @@ namespace Texas_holdem_engine_01
                 var hand = new List<Card>(table);
                 hand.Add(item.GetCards()[0]);
                 hand.Add(item.GetCards()[1]);
-                var flushCount = CheckFlush.CheckIfFlush(hand);
-                if (flushCount > 0)
-                {
-                    item.Flush = true;
-                }
-
+                item.Flush = CheckFlush.CheckIfFlush(hand);
+                
                 item.HighCard = CheckHighCard.HighestCard(hand);
                 int pairs = CheckPairs.CheckForPair(hand);
                 if (pairs == 1)

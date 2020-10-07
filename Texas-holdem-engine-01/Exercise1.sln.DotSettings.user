@@ -22,5 +22,6 @@
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckPairsTest.Two_Pairs&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckPairsTest.Two_The_Same_Kind_Pairs&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeOfKindTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckFlushTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
