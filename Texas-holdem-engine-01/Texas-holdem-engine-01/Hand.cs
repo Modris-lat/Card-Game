@@ -13,6 +13,7 @@ namespace Texas_holdem_engine_01
         List<Card> Cards;
         public bool RoyalFlush { get; set; }
         public bool StraightFl { get; set; }
+        public bool FourOfKind { get; set; }
         public bool FullHouse { get; set; }
         public bool Flush { get; set; }
         public bool Straight { get; set; }

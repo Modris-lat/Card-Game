@@ -28,12 +28,22 @@ namespace Texas_holdem_engine_01
                 {
                     item.TwoPair = true;
                 }
-                int threeOfKind = CheckThreeOfKind.ThreeOfKind(hand);
+                int threeOfKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand).Item1;
+                int fourOfKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand).Item2;
                 if (threeOfKind == 1)
                 {
                     item.ThreeOfKind = true;
                 }
+
+                if (fourOfKind == 1)
+                {
+                    item.FourOfKind = true;
+                }
                 item.Straight = CheckStraight.CheckIfStraight(hand);
+                if (item.ThreeOfKind == true && item.Pair == true)
+                {
+                    item.FullHouse = true;
+                }
             }
             throw new NotImplementedException();
         }

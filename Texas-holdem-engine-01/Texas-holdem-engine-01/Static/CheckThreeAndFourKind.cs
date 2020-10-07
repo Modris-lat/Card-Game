@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Texas_holdem_engine_01.Static
 {
-    public class CheckThreeOfKind
+    public class CheckThreeAndFourKind
     {
-        public static int ThreeOfKind(List<Card> cards)
+        public static (int, int) ThreeAndFourOfKind(List<Card> cards)
         {
             int countA = 0;
             int countK = 0;
@@ -24,6 +24,7 @@ namespace Texas_holdem_engine_01.Static
             int count3 = 0;
             int count2 = 0;
             int threeCount = 0;
+            int fourCount = 0;
             foreach (var card in cards)
             {
                 if (card.Rank == '2')
@@ -33,6 +34,10 @@ namespace Texas_holdem_engine_01.Static
                     {
                         threeCount++;
                     }
+                    if (count2 == 4)
+                    {
+                        fourCount++;
+                    }
                 }
                 else if (card.Rank == '3')
                 {
@@ -40,6 +45,10 @@ namespace Texas_holdem_engine_01.Static
                     if (count3 == 3)
                     {
                         threeCount++;
+                    }
+                    if (count3 == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == '4')
@@ -49,6 +58,10 @@ namespace Texas_holdem_engine_01.Static
                     {
                         threeCount++;
                     }
+                    if (count4 == 4)
+                    {
+                        fourCount++;
+                    }
                 }
                 else if (card.Rank == '5')
                 {
@@ -57,82 +70,122 @@ namespace Texas_holdem_engine_01.Static
                     {
                         threeCount++;
                     }
+                    if (count5 == 4)
+                    {
+                        fourCount++;
+                    }
                 }
                 else if (card.Rank == '6')
                 {
                     count6++;
-                    if (count6 == 2 || count6 == 4)
+                    if (count6 == 3)
                     {
                         threeCount++;
+                    }
+                    if (count6 == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == '7')
                 {
                     count7++;
-                    if (count7 == 2 || count7 == 4)
+                    if (count7 == 3)
                     {
                         threeCount++;
+                    }
+                    if (count7 == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == '8')
                 {
                     count8++;
-                    if (count8 == 2 || count8 == 4)
+                    if (count8 == 3)
                     {
                         threeCount++;
+                    }
+                    if (count8 == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == '9')
                 {
                     count9++;
-                    if (count9 == 2 || count9 == 4)
+                    if (count9 == 3)
                     {
                         threeCount++;
+                    }
+                    if (count9 == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == 'T')
                 {
                     countT++;
-                    if (countT == 2 || countT == 4)
+                    if (countT == 3)
                     {
                         threeCount++;
+                    }
+                    if (countT == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == 'J')
                 {
                     countJ++;
-                    if (countJ == 2 || countJ == 4)
+                    if (countJ == 3)
                     {
                         threeCount++;
+                    }
+                    if (countJ == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == 'Q')
                 {
                     countQ++;
-                    if (countQ == 2 || countQ == 4)
+                    if (countQ == 3)
                     {
                         threeCount++;
+                    }
+                    if (countQ == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == 'K')
                 {
                     countK++;
-                    if (countK == 2 || countK == 4)
+                    if (countK == 3)
                     {
                         threeCount++;
+                    }
+                    if (countK == 4)
+                    {
+                        fourCount++;
                     }
                 }
                 else if (card.Rank == 'A')
                 {
                     countA++;
-                    if (countA == 2 || countA == 4)
+                    if (countA == 3)
                     {
                         threeCount++;
+                    }
+                    if (countA == 4)
+                    {
+                        fourCount++;
                     }
                 }
             }
 
-            return threeCount;
+            return (threeCount, fourCount);
         }
     }
 }

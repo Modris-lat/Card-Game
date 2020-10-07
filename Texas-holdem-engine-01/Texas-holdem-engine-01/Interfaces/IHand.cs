@@ -12,6 +12,7 @@ namespace Texas_holdem_engine_01.Interfaces
         List<Card> GetCards();
         bool RoyalFlush { get; set; }
         bool StraightFl { get; set; }
+        bool FourOfKind { get; set; }
         bool FullHouse { get; set; }
         bool Flush { get; set; }
         bool Straight { get; set; }
