@@ -48,6 +48,7 @@ namespace Texas_holdem_engine_01
                 if (item.Flush != ' ' && item.Straight)
                 {
                     item.RoyalFlush = CheckRoyalFlush.RoyalFlush(hand, item.Flush);
+                    item.StraightFl = CheckStraightFlush.StraightFlush(hand, item.Flush);
                 }
             }
             throw new NotImplementedException();
