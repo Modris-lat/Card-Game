@@ -8,7 +8,7 @@ namespace Texas_holdem_engine_01.Static
 {
     public class CheckFlush
     {
-        public static bool CheckIfFlush(List<Card> list)
+        public static char CheckIfFlush(List<Card> list)
         {
             int countH = 0;
             int countD = 0;
@@ -35,21 +35,21 @@ namespace Texas_holdem_engine_01.Static
             }
             if (countS >= 5)
             {
-                return true;
+                return 's';
             }
             if (countC >= 5)
             {
-                return true;
+                return 'c';
             }
             if (countD >= 5)
             {
-                return true;
+                return 'd';
             }
             if (countH >= 5)
             {
-                return true;
+                return 'h';
             }
-            return false;
+            return ' ';
         }
     }
 }

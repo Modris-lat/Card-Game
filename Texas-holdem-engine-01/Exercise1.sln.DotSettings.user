@@ -26,5 +26,10 @@
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckStraightTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.FourKind_Low&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.FourKind_High&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.One_Trio&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.Two_Trios&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckRoyalFlushTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckStraightFlushTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

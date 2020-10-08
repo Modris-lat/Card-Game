@@ -40,9 +40,14 @@ namespace Texas_holdem_engine_01
                     item.FourOfKind = true;
                 }
                 item.Straight = CheckStraight.CheckIfStraight(hand);
-                if (item.ThreeOfKind == true && item.Pair == true)
+                if (item.ThreeOfKind && item.Pair)
                 {
                     item.FullHouse = true;
+                }
+
+                if (item.Flush != ' ' && item.Straight)
+                {
+                    item.RoyalFlush = CheckRoyalFlush.RoyalFlush(hand, item.Flush);
                 }
             }
             throw new NotImplementedException();

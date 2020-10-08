@@ -14,7 +14,7 @@ namespace Texas_holdem_engine_01.Interfaces
         bool StraightFl { get; set; }
         bool FourOfKind { get; set; }
         bool FullHouse { get; set; }
-        bool Flush { get; set; }
+        char Flush { get; set; }
         bool Straight { get; set; }
         bool ThreeOfKind { get; set; }
         bool TwoPair { get; set; }

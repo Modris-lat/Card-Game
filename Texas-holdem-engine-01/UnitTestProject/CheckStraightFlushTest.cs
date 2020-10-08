@@ -7,29 +7,29 @@ using Texas_holdem_engine_01.Static;
 namespace UnitTestProject
 {
     [TestClass]
-    public class CheckFlushTest
+    public class CheckStraightFlushTest
     {
         [TestMethod]
-        public void Test_If_Flush_True()
+        public void StraightFlush_True()
         {
             var cardList = new List<Card>
             {
                 new Card('2', 's'), new Card('3', 's'),
                 new Card('4', 's'), new Card('5', 's'),
-                new Card('6', 's'), new Card('7', 'd')
+                new Card('6', 's'), new Card('J', 'd')
             };
-            Assert.IsTrue(CheckFlush.CheckIfFlush(cardList) == 's');
+            Assert.IsTrue(CheckStraightFlush.StraightFlush(cardList, 's'));
         }
         [TestMethod]
-        public void Test_If_Flush_False()
+        public void StraightFlush_False()
         {
             var cardList = new List<Card>
             {
-                new Card('2', 'd'), new Card('3', 's'),
-                new Card('4', 's'), new Card('5', 's'),
-                new Card('6', 's'), new Card('7', 'd')
+                new Card('T', 's'), new Card('K', 's'),
+                new Card('J', 's'), new Card('A', 's'),
+                new Card('Q', 's'), new Card('J', 'd')
             };
-            Assert.IsTrue(CheckFlush.CheckIfFlush(cardList) == ' ');
+            Assert.IsTrue(CheckStraightFlush.StraightFlush(cardList, 's') == false);
         }
     }
 }

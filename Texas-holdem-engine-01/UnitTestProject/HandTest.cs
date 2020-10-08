@@ -34,10 +34,10 @@ namespace UnitTestProject
         [TestMethod]
         public void Test_Hand_Value()
         {
-            Hand.Flush = true;
+            Hand.Flush = 's';
             Hand.HighCard = 12;
             Hand.FullHouse = false;
-            Assert.IsTrue(Hand.Flush && Hand.HighCard == 12 && Hand.FullHouse == false && Hand.Pair == false);
+            Assert.IsTrue(Hand.Flush == 's' && Hand.HighCard == 12 && Hand.FullHouse == false && Hand.Pair == false);
         }
     }
 }
