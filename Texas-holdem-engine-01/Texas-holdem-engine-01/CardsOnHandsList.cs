@@ -35,9 +35,13 @@ namespace Texas_holdem_engine_01
             return CardsOnHands;
         }
 
-        public void RemoveHand(IHand hand)
+        public void RemoveHand(int id)
         {
-            CardsOnHands.Remove(hand);
+            var hand = CardsOnHands.SingleOrDefault(h => id == h.Id);
+            if(hand != null)
+            {
+                CardsOnHands.Remove(hand);
+            }
         }
     }
 }

@@ -28,6 +28,7 @@ namespace UnitTestProject
             Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
             Table.GetCardsOnTable();
             CardsOnHands.AddCardsToHandsList();
+            Output.GetOutput();
             Assert.IsTrue(Output.Output() == "Ac4d=Ad4s 5d6d As9s KhKd");
         }
         [TestMethod]
@@ -36,6 +37,7 @@ namespace UnitTestProject
             Input.GetInput("2h3h4h5d8d KdKs 9hJh");
             Table.GetCardsOnTable();
             CardsOnHands.AddCardsToHandsList();
+            Output.GetOutput();
             Assert.IsTrue(Output.Output() == "KdKs 9hJh");
         }
     }

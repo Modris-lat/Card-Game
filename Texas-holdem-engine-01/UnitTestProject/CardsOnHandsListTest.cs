@@ -48,7 +48,7 @@ namespace UnitTestProject
         {
             Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
             CardsOnHands.AddCardsToHandsList();
-            CardsOnHands.RemoveHand(CardsOnHands.ShowCardsOnHandsList()[0]);
+            CardsOnHands.RemoveHand(CardsOnHands.ShowCardsOnHandsList()[0].Id);
             Assert.IsTrue(CardsOnHands.ShowCardsOnHandsList().Count == 4);
         }
     }

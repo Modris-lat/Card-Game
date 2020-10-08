@@ -11,6 +11,6 @@ namespace Texas_holdem_engine_01
     {
         void AddCardsToHandsList();
         List<IHand> ShowCardsOnHandsList();
-        void RemoveHand(IHand hand);
+        void RemoveHand(int id);
     }
 }

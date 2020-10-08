@@ -39,5 +39,69 @@ namespace UnitTestProject
             Hand.FullHouse = false;
             Assert.IsTrue(Hand.Flush == 's' && Hand.HighCard == 12 && Hand.FullHouse == false && Hand.Pair == false);
         }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_Flush()
+        {
+            Hand.Flush = 's';
+            Hand.HighCard = 12;
+            Hand.FullHouse = false;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 47);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_RoyalFlush()
+        {
+            Hand.RoyalFlush = true;
+            Hand.HighCard = 14;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 114);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_StraightFlush()
+        {
+            Hand.StraightFl = true;
+            Hand.HighCard = 14;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 74);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_FourOfKind()
+        {
+            Hand.FourOfKind = true;
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 55);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_FullHouse()
+        {
+            Hand.FullHouse = true;
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 50);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_Straight()
+        {
+            Hand.Straight = true;
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 40);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_ThreeOfKind()
+        {
+            Hand.ThreeOfKind = true;
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 35);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_TwoPair()
+        {
+            Hand.TwoPair = true;
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 30);
+        }
+        [TestMethod]
+        public void Test_Strength_Of_Hand_Value_Pair()
+        {
+            Hand.Pair = true;
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 25);
+        }
     }
 }

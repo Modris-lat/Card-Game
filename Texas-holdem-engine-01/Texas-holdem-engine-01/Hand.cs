@@ -32,6 +32,54 @@ namespace Texas_holdem_engine_01
             Id = id;
             Cards = cards;
         }
+        public int GetStrengthOfHand()
+        {
+            int totalStrength = HighCard;
+            if (TwoPair)
+            {
+                totalStrength += 20;
+            }
+            else if (Pair)
+            {
+                totalStrength += 15;
+            }
+
+            if (ThreeOfKind)
+            {
+                totalStrength += 25;
+            }
+
+            if (Straight)
+            {
+                totalStrength += 30;
+            }
+
+            if (Flush == 's' || Flush == 'h' || Flush == 'c' || Flush == 'd')
+            {
+                totalStrength += 35;
+            }
+
+            if (FullHouse)
+            {
+                totalStrength += 40;
+            }
+
+            if (FourOfKind)
+            {
+                totalStrength += 45;
+            }
+
+            if (StraightFl)
+            {
+                totalStrength += 60;
+            }
+
+            if (RoyalFlush)
+            {
+                totalStrength += 100;
+            }
+            return totalStrength;
+        }
 
         public List<Card> GetCards()
         {

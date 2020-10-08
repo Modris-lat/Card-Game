@@ -12,6 +12,8 @@ namespace Texas_holdem_engine_01
     {
         public IHand CalculateCardsValues(IList<Card> table, List<IHand> hands)
         {
+            int strongest = 0;
+            IHand strongestHand = new Hand();
             foreach (var item in hands)
             {
                 var hand = new List<Card>(table);
@@ -50,9 +52,16 @@ namespace Texas_holdem_engine_01
                     item.RoyalFlush = CheckRoyalFlush.RoyalFlush(hand, item.Flush);
                     item.StraightFl = CheckStraightFlush.StraightFlush(hand, item.Flush);
                 }
-            }
-            throw new NotImplementedException();
-        }
 
+                int strength = item.GetStrengthOfHand();
+                if (strength > strongest)
+                {
+                    strongest = strength;
+                    strongestHand = item;
+                }
+            }
+
+            return strongestHand;
+        }
     }
 }

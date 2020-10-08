@@ -20,5 +20,6 @@ namespace Texas_holdem_engine_01.Interfaces
         bool TwoPair { get; set; }
         bool Pair { get; set; }
         int HighCard { get; set; }
+        int GetStrengthOfHand();
     }
 }
