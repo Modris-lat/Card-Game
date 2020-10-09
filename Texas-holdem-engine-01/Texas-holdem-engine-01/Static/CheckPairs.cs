@@ -8,7 +8,7 @@ namespace Texas_holdem_engine_01.Static
 {
     public class CheckPairs
     {
-        public static int CheckForPair(List<Card> cards)
+        public static (int, int) CheckForPair(List<Card> cards)
         {
             int countA = 0;
             int countK = 0;
@@ -24,6 +24,7 @@ namespace Texas_holdem_engine_01.Static
             int count3 = 0;
             int count2 = 0;
             int pairCount = 0;
+            int value = 0;
             foreach (var card in cards)
             {
                 if (card.Rank == '2')
@@ -32,6 +33,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count2 == 2 || count2 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank2;
                     }
                 }
                 else if (card.Rank == '3')
@@ -40,6 +42,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count3 == 2 || count3 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank3;
                     }
                 }
                 else if (card.Rank == '4')
@@ -48,6 +51,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count4 == 2 || count4 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank4;
                     }
                 }
                 else if (card.Rank == '5')
@@ -56,6 +60,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count5 == 2 || count5 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank5;
                     }
                 }
                 else if (card.Rank == '6')
@@ -64,6 +69,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count6 == 2 || count6 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank6;
                     }
                 }
                 else if (card.Rank == '7')
@@ -72,6 +78,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count7 == 2 || count7 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank7;
                     }
                 }
                 else if (card.Rank == '8')
@@ -80,6 +87,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count8 == 2 || count8 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank8;
                     }
                 }
                 else if (card.Rank == '9')
@@ -88,6 +96,7 @@ namespace Texas_holdem_engine_01.Static
                     if (count9 == 2 || count9 == 4)
                     {
                         pairCount++;
+                        value += CardRankings.Rank9;
                     }
                 }
                 else if (card.Rank == 'T')
@@ -96,6 +105,7 @@ namespace Texas_holdem_engine_01.Static
                     if (countT == 2 || countT == 4)
                     {
                         pairCount++;
+                        value += CardRankings.RankT;
                     }
                 }
                 else if (card.Rank == 'J')
@@ -104,6 +114,7 @@ namespace Texas_holdem_engine_01.Static
                     if (countJ == 2 || countJ == 4)
                     {
                         pairCount++;
+                        value += CardRankings.RankJ;
                     }
                 }
                 else if (card.Rank == 'Q')
@@ -112,6 +123,7 @@ namespace Texas_holdem_engine_01.Static
                     if (countQ == 2 || countQ == 4)
                     {
                         pairCount++;
+                        value += CardRankings.RankQ;
                     }
                 }
                 else if (card.Rank == 'K')
@@ -120,6 +132,7 @@ namespace Texas_holdem_engine_01.Static
                     if (countK == 2 || countK == 4)
                     {
                         pairCount++;
+                        value += CardRankings.RankK;
                     }
                 }
                 else if (card.Rank == 'A')
@@ -128,11 +141,12 @@ namespace Texas_holdem_engine_01.Static
                     if (countA == 2 || countA == 4)
                     {
                         pairCount++;
+                        value += CardRankings.RankA;
                     }
                 }
             }
 
-            return pairCount;
+            return (pairCount, value);
         }
     }
 }

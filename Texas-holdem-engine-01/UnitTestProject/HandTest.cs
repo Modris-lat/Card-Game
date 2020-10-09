@@ -21,6 +21,11 @@ namespace UnitTestProject
             Assert.IsTrue(Hand.Id == 1);
         }
         [TestMethod]
+        public void Test_Id_False()
+        {
+            Assert.IsFalse(Hand.Id == 2);
+        }
+        [TestMethod]
         public void Test_List_Count()
         {
             Assert.IsTrue(Hand.GetCards().Count == 2);
@@ -43,23 +48,23 @@ namespace UnitTestProject
         public void Test_Strength_Of_Hand_Value_Flush()
         {
             Hand.Flush = 's';
-            Hand.HighCard = 12;
+            Hand.HighCard = 10;
             Hand.FullHouse = false;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 47);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 45);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_RoyalFlush()
         {
             Hand.RoyalFlush = true;
             Hand.HighCard = 14;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 114);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 100);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_StraightFlush()
         {
             Hand.StraightFl = true;
-            Hand.HighCard = 14;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 74);
+            Hand.HighCard = 10;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 70);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_FourOfKind()

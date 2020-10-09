@@ -15,11 +15,11 @@ namespace Texas_holdem_engine_01.Static
             {
                 if (card.Rank == '2')
                 {
-                    int value = 2;
+                    int value = CardRankings.Rank2;
                 }
                 else if (card.Rank == '3')
                 {
-                    int value = 3;
+                    int value = CardRankings.Rank3;
                     if (value > highest)
                     {
                         highest = value;
@@ -27,7 +27,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == '4')
                 {
-                    int value = 4;
+                    int value = CardRankings.Rank4;
                     if (value > highest)
                     {
                         highest = value;
@@ -35,7 +35,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == '5')
                 {
-                    int value = 5;
+                    int value = CardRankings.Rank5;
                     if (value > highest)
                     {
                         highest = value;
@@ -43,7 +43,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == '6')
                 {
-                    int value = 6;
+                    int value = CardRankings.Rank6;
                     if (value > highest)
                     {
                         highest = value;
@@ -51,7 +51,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == '7')
                 {
-                    int value = 7;
+                    int value = CardRankings.Rank7;
                     if (value > highest)
                     {
                         highest = value;
@@ -59,7 +59,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == '8')
                 {
-                    int value = 8;
+                    int value = CardRankings.Rank8;
                     if (value > highest)
                     {
                         highest = value;
@@ -67,7 +67,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == '9')
                 {
-                    int value = 9;
+                    int value = CardRankings.Rank9;
                     if (value > highest)
                     {
                         highest = value;
@@ -75,7 +75,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == 'T')
                 {
-                    int value = 10;
+                    int value = CardRankings.RankT;
                     if (value > highest)
                     {
                         highest = value;
@@ -83,7 +83,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == 'J')
                 {
-                    int value = 11;
+                    int value = CardRankings.RankJ;
                     if (value > highest)
                     {
                         highest = value;
@@ -91,7 +91,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == 'Q')
                 {
-                    int value = 12;
+                    int value = CardRankings.RankQ;
                     if (value > highest)
                     {
                         highest = value;
@@ -99,7 +99,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == 'K')
                 {
-                    int value = 13;
+                    int value = CardRankings.RankK;
                     if (value > highest)
                     {
                         highest = value;
@@ -107,7 +107,7 @@ namespace Texas_holdem_engine_01.Static
                 }
                 else if (card.Rank == 'A')
                 {
-                    int value = 14;
+                    int value = CardRankings.RankA;
                     if (value > highest)
                     {
                         highest = value;

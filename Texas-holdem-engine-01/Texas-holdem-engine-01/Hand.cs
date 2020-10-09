@@ -37,46 +37,46 @@ namespace Texas_holdem_engine_01
             int totalStrength = HighCard;
             if (TwoPair)
             {
-                totalStrength += 20;
+                totalStrength = 20 + HighCard;
             }
             else if (Pair)
             {
-                totalStrength += 15;
+                totalStrength = 15 + HighCard;
             }
 
             if (ThreeOfKind)
             {
-                totalStrength += 25;
+                totalStrength = 25 + HighCard;
             }
 
             if (Straight)
             {
-                totalStrength += 30;
+                totalStrength = 30 + HighCard;
             }
 
             if (Flush == 's' || Flush == 'h' || Flush == 'c' || Flush == 'd')
             {
-                totalStrength += 35;
+                totalStrength = 35 + HighCard;
             }
 
             if (FullHouse)
             {
-                totalStrength += 40;
+                totalStrength = 40 + HighCard;
             }
 
             if (FourOfKind)
             {
-                totalStrength += 45;
+                totalStrength = 45 + HighCard;
             }
 
             if (StraightFl)
             {
-                totalStrength += 60;
+                totalStrength = 60 + HighCard;
             }
 
             if (RoyalFlush)
             {
-                totalStrength += 100;
+                totalStrength = 100;
             }
             return totalStrength;
         }

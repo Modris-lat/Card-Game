@@ -1,36 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b9807da_002D4b68_002D4419_002Da4e0_002Dede77c947d72/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UnitTest1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.InputTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.TableTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Add_Cards_To_List&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Add_Cards_In_First_Hand&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Add_Cards_In_Last_Hand&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.OutputHandBlockTest.Valid_Output_Five_Hands&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.OutputHandBlockTest.Valid_Output_Two_Hands&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest.Remove_Hand&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CardsOnHandsListTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_Id&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_List_Count&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_List_Items&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest.Test_Hand_Value&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckHighestCardTest.TestMethod&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckHighestCardTest.Test_Method&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckHighestCardTest.Test_Method_For_Cards&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckFlushTest.TestMethod1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckPairsTest.One_Pair&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckPairsTest.Two_Pairs&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckPairsTest.Two_The_Same_Kind_Pairs&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeOfKindTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckFlushTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckStraightTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.FourKind_Low&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.FourKind_High&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.One_Trio&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckThreeAndFourOfKindTest.Two_Trios&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckRoyalFlushTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.HandTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.CheckStraightFlushTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::2A6F2A89-DAB9-49BD-9F9B-64FA02E35388::.NETFramework,Version=v4.7.2::UnitTestProject.OutputHandBlockTest&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

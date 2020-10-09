@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardRankingTest.cs" />
     <Compile Include="CardsOnHandsListTest.cs" />
     <Compile Include="CheckFlushTest.cs" />
     <Compile Include="CheckHighestCardTest.cs" />

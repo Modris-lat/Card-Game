@@ -19,35 +19,35 @@ namespace Texas_holdem_engine_01.Static
                 if (card.Suit == 'h')
                 {
                     countH++;
+                    if (countH >= 5)
+                    {
+                        return 'h';
+                    }
                 }
                 else if (card.Suit == 'd')
                 {
                     countD++;
+                    if (countD >= 5)
+                    {
+                        return 'd';
+                    }
                 }
                 else if (card.Suit == 's')
                 {
                     countS++;
+                    if (countS >= 5)
+                    {
+                        return 's';
+                    }
                 }
                 else if (card.Suit == 'c')
                 {
                     countC++;
+                    if (countC >= 5)
+                    {
+                        return 'c';
+                    }
                 }
-            }
-            if (countS >= 5)
-            {
-                return 's';
-            }
-            if (countC >= 5)
-            {
-                return 'c';
-            }
-            if (countD >= 5)
-            {
-                return 'd';
-            }
-            if (countH >= 5)
-            {
-                return 'h';
             }
             return ' ';
         }

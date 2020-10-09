@@ -29,19 +29,28 @@ namespace Texas_holdem_engine_01
         public void GetOutput()
         {
             var handsList = new List<IHand>() { };
+            var listOfEquals = new List<List<IHand>>() { };
             while (CardsOnHands.ShowCardsOnHandsList().Any())
             {
-                var strongestHand = Calculate.CalculateCardsValues(Table.ShowCardsOnTable(), CardsOnHands.ShowCardsOnHandsList());
+                var returnedValues =
+                    Calculate.CalculateCardsValues(Table.ShowCardsOnTable(), CardsOnHands.ShowCardsOnHandsList());
+                var strongestHand = returnedValues.Item1;
+                if (returnedValues.Item2.Any())
+                {
+                    listOfEquals.Add(returnedValues.Item2);
+                    foreach (var hand in returnedValues.Item2)
+                    {
+                        CardsOnHands.RemoveHand(hand.Id);
+                    }
+                }
                 handsList.Add(strongestHand);
                 CardsOnHands.RemoveHand(strongestHand.Id);
             }
-
             handsList.Reverse();
             foreach (var hand in handsList)
             {
-                orderOfCards.Add(string.Concat(
-                    string.Concat(hand.GetCards()[0].Rank, hand.GetCards()[0].Suit),
-                    string.Concat(hand.GetCards()[1].Rank, hand.GetCards()[1].Suit)));
+                orderOfCards.Add(string.Concat(hand.GetCards()[0].Rank, hand.GetCards()[0].Suit) +
+                                 string.Concat(hand.GetCards()[1].Rank, hand.GetCards()[1].Suit));
             }
         }
     }

@@ -23,7 +23,7 @@ namespace UnitTestProject
             Output = new OutputHandBlock(Table, CardsOnHands, Calculate);
         }
         [TestMethod]
-        public void Valid_Output_Five_Hands()
+        public void Valid_Output_Five_Hands_If_Equal_Strength()
         {
             Input.GetInput("4cKs4h8s7s Ad4s Ac4d As9s KhKd 5d6d");
             Table.GetCardsOnTable();
@@ -39,6 +39,15 @@ namespace UnitTestProject
             CardsOnHands.AddCardsToHandsList();
             Output.GetOutput();
             Assert.IsTrue(Output.Output() == "KdKs 9hJh");
+        }
+        [TestMethod]
+        public void Valid_Output_Three_Hands()
+        {
+            Input.GetInput("2h3h4h5d8d KdKs 9hJh TsQc");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            Output.GetOutput();
+            Assert.IsTrue(Output.Output() == "TsQc KdKs 9hJh");
         }
     }
 }

@@ -10,9 +10,10 @@ namespace Texas_holdem_engine_01
 {
     public class CalculateHandValues: ICalculateHandValues
     {
-        public IHand CalculateCardsValues(IList<Card> table, List<IHand> hands)
+        public (IHand, List<IHand>) CalculateCardsValues(IList<Card> table, List<IHand> hands)
         {
             int strongest = 0;
+            var listOfEquals = new List<IHand>() { };
             IHand strongestHand = new Hand();
             foreach (var item in hands)
             {
@@ -21,7 +22,12 @@ namespace Texas_holdem_engine_01
                 hand.Add(item.GetCards()[1]);
                 item.HighCard = CheckHighCard.HighestCard(hand);
                 item.Flush = CheckFlush.CheckIfFlush(hand);
-                int pairs = CheckPairs.CheckForPair(hand);
+                var result = CheckPairs.CheckForPair(hand);
+                int pairs = result.Item1;
+                if (result.Item2 > 0)
+                {
+                    item.HighCard += result.Item2;
+                }
                 if (pairs == 1)
                 {
                     item.Pair = true;
@@ -54,14 +60,20 @@ namespace Texas_holdem_engine_01
                 }
 
                 int strength = item.GetStrengthOfHand();
+                if (strength == strongest)
+                {
+                    listOfEquals.Add(strongestHand);
+                    listOfEquals.Add(item);
+                }
                 if (strength > strongest)
                 {
                     strongest = strength;
                     strongestHand = item;
                 }
+                
             }
 
-            return strongestHand;
+            return (strongestHand, listOfEquals);
         }
     }
 }
