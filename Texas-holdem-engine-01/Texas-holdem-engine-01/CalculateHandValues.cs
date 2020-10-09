@@ -36,17 +36,20 @@ namespace Texas_holdem_engine_01
                     item.TwoPair = true;
                 }
                 var resultThreeFourKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand);
-                int threeOfKind = resultThreeFourKind.Item1;
-                int fourOfKind = resultThreeFourKind.Item2;
-                if (threeOfKind == 1)
-                {
-                    item.ThreeOfKind = true;
-                }
-                item.Flush = CheckFlush.CheckIfFlush(hand);
-                if (fourOfKind == 1)
+                int threeOfKind = resultThreeFourKind.ThreeKindValue;
+                int fourOfKind = resultThreeFourKind.FourKindValue;
+                if (resultThreeFourKind.FourKind)
                 {
                     item.FourOfKind = true;
+                    item.HighCard = resultThreeFourKind.FourKindValue;
                 }
+                else if (resultThreeFourKind.ThreeKind)
+                {
+                    item.ThreeOfKind = true;
+                    item.HighCard = resultThreeFourKind.ThreeKindValue;
+                }
+                item.Flush = CheckFlush.CheckIfFlush(hand);
+                
                 item.Straight = CheckStraight.CheckIfStraight(hand);
                 if (item.ThreeOfKind && item.Pair)
                 {

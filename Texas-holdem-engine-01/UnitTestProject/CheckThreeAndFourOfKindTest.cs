@@ -10,7 +10,7 @@ namespace UnitTestProject
     public class CheckThreeAndFourOfKindTest
     {
         [TestMethod]
-        public void One_Trio()
+        public void One_Trio_True()
         {
             var cardList = new List<Card>
             {
@@ -18,10 +18,10 @@ namespace UnitTestProject
                 new Card('4', 's'), new Card('J', 's'),
                 new Card('6', 's'), new Card('J', 'd')
             };
-            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).Item1 == 1);
+            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).ThreeKind);
         }
         [TestMethod]
-        public void Two_Trios()
+        public void Two_Trio_Value()
         {
             var cardList = new List<Card>
             {
@@ -29,7 +29,7 @@ namespace UnitTestProject
                 new Card('2', 's'), new Card('J', 's'),
                 new Card('2', 's'), new Card('J', 'd')
             };
-            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).Item1 == 2);
+            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).ThreeKindValue == CardRankings.RankJ);
         }
         [TestMethod]
         public void FourKind_Low()
@@ -40,10 +40,10 @@ namespace UnitTestProject
                 new Card('2', 's'), new Card('J', 's'),
                 new Card('2', 's'), new Card('J', 'd')
             };
-            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).Item2 == 1);
+            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).FourKind);
         }
         [TestMethod]
-        public void FourKind_High()
+        public void FourKind_High_Value()
         {
             var cardList = new List<Card>
             {
@@ -51,7 +51,7 @@ namespace UnitTestProject
                 new Card('2', 's'), new Card('J', 's'),
                 new Card('J', 's'), new Card('J', 'd')
             };
-            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).Item2 == 1);
+            Assert.IsTrue(CheckThreeAndFourKind.ThreeAndFourOfKind(cardList).FourKindValue == CardRankings.RankJ);
         }
     }
 }

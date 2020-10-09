@@ -41,20 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReturnPairValue.cs" />
-    <Compile Include="Static\CardRankings.cs" />
+    <Compile Include="ReturnResultClass\ReturnPairValue.cs" />
+    <Compile Include="ReturnResultClass\ReturnThreeAndFourValues.cs" />
+    <Compile Include="StaticGetValues\CardRankings.cs" />
     <Compile Include="Interfaces\ICalculateHanValues.cs" />
     <Compile Include="CalculateHandValues.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardsOnHandsList.cs" />
-    <Compile Include="Static\CheckFlush.cs" />
-    <Compile Include="Static\CheckHighCard.cs" />
-    <Compile Include="Static\CheckPairs.cs" />
-    <Compile Include="Static\CheckRoyalFlush.cs" />
-    <Compile Include="Static\CheckStraight.cs" />
-    <Compile Include="Static\CheckStraightFlush.cs" />
-    <Compile Include="Static\CheckThreeAndFourKind.cs" />
-    <Compile Include="Static\ExtractCards.cs" />
+    <Compile Include="StaticGetValues\CheckFlush.cs" />
+    <Compile Include="StaticGetValues\CheckHighCard.cs" />
+    <Compile Include="StaticGetValues\CheckPairs.cs" />
+    <Compile Include="StaticGetValues\CheckRoyalFlush.cs" />
+    <Compile Include="StaticGetValues\CheckStraight.cs" />
+    <Compile Include="StaticGetValues\CheckStraightFlush.cs" />
+    <Compile Include="StaticGetValues\CheckThreeAndFourKind.cs" />
+    <Compile Include="StaticGetValues\ExtractCards.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />
     <Compile Include="Interfaces\IGetInput.cs" />
