@@ -21,12 +21,11 @@ namespace Texas_holdem_engine_01
                 hand.Add(item.GetCards()[0]);
                 hand.Add(item.GetCards()[1]);
                 item.HighCard = CheckHighCard.HighestCard(hand);
-                item.Flush = CheckFlush.CheckIfFlush(hand);
-                var result = CheckPairs.CheckForPair(hand);
-                int pairs = result.Item1;
-                if (result.Item2 > 0)
+                var resultPairs = CheckPairs.CheckForPair(hand);
+                int pairs = resultPairs.PairCount;
+                if (resultPairs.PairValue > 0)
                 {
-                    item.HighCard += result.Item2;
+                    item.HighCard += resultPairs.PairValue;
                 }
                 if (pairs == 1)
                 {
@@ -36,13 +35,14 @@ namespace Texas_holdem_engine_01
                 {
                     item.TwoPair = true;
                 }
-                int threeOfKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand).Item1;
-                int fourOfKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand).Item2;
+                var resultThreeFourKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand);
+                int threeOfKind = resultThreeFourKind.Item1;
+                int fourOfKind = resultThreeFourKind.Item2;
                 if (threeOfKind == 1)
                 {
                     item.ThreeOfKind = true;
                 }
-
+                item.Flush = CheckFlush.CheckIfFlush(hand);
                 if (fourOfKind == 1)
                 {
                     item.FourOfKind = true;

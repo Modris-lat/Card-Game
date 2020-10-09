@@ -19,7 +19,19 @@ namespace UnitTestProject
                 new Card('6', 's'), new Card('J', 'd')
             };
             var result = CheckPairs.CheckForPair(cardList);
-            Assert.IsTrue(result.Item1 == 1 && result.Item2 == CardRankings.RankJ);
+            Assert.IsTrue(result.PairCount == 1 && result.PairValue == CardRankings.RankJ);
+        }
+        [TestMethod]
+        public void One_Pair_False()
+        {
+            var cardList = new List<Card>
+            {
+                new Card('2', 's'), new Card('3', 's'),
+                new Card('4', 's'), new Card('5', 's'),
+                new Card('6', 's'), new Card('J', 'd')
+            };
+            var result = CheckPairs.CheckForPair(cardList);
+            Assert.IsTrue(result.PairCount == 0 && result.PairValue == 0);
         }
         [TestMethod]
         public void Two_Pairs()
@@ -31,8 +43,8 @@ namespace UnitTestProject
                 new Card('6', 's'), new Card('J', 'd')
             };
             var result = CheckPairs.CheckForPair(cardList);
-            Assert.IsTrue(result.Item1 == 2 &&
-                          result.Item2 == CardRankings.Rank2 + CardRankings.RankJ);
+            Assert.IsTrue(result.PairCount == 2 &&
+                          result.PairValue == CardRankings.Rank2 + CardRankings.RankJ);
         }
         [TestMethod]
         public void Two_The_Same_Kind_Pairs()
@@ -44,8 +56,8 @@ namespace UnitTestProject
                 new Card('6', 's'), new Card('2', 'd')
             };
             var result = CheckPairs.CheckForPair(cardList);
-            Assert.IsTrue(result.Item1 == 2 &&
-                          result.Item2 == CardRankings.Rank2 + CardRankings.Rank2);
+            Assert.IsFalse(result.PairCount == 2 &&
+                          result.PairValue == CardRankings.Rank2 + CardRankings.Rank2);
         }
     }
 }
