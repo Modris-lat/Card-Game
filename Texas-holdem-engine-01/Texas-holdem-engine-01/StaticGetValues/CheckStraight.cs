@@ -10,6 +10,7 @@ namespace Texas_holdem_engine_01.Static
     {
         public static bool CheckIfStraight(List<Card> cards)
         {
+            //var sortedCards = cards.Sort
             var valuesList = new List<int>();
             foreach (var card in cards)
             {

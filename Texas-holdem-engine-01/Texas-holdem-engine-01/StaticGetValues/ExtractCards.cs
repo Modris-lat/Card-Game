@@ -15,9 +15,10 @@ namespace Texas_holdem_engine_01
             {
                 if (i % 2 != 0)
                 {
-                    string card = string.Empty;
-                    card = cards.Substring(i - 1, 2);
-                    cardList.Add(new Card(card[0], card[1]));
+                    string cardString = cards.Substring(i - 1, 2);
+                    var card = new Card(cardString[0], cardString[1]);
+                    card.SetCardValue();
+                    cardList.Add(card);
                 }
             }
 

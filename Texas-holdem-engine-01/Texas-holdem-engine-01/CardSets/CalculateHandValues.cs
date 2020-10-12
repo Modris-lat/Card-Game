@@ -22,17 +22,15 @@ namespace Texas_holdem_engine_01
                 item.HighCard = CheckHighCard.HighestCard(hand);
                 var resultPairs = CheckPairs.CheckForPair(hand);
                 int pairs = resultPairs.PairCount;
-                if (resultPairs.PairValue > 0)
-                {
-                    item.HighCard += resultPairs.PairValue;
-                }
                 if (pairs == 1)
                 {
                     item.Pair = true;
+                    item.HighCard = resultPairs.PairValue;
                 }
                 else if (pairs == 2)
                 {
                     item.TwoPair = true;
+                    item.HighCard = resultPairs.PairValue;
                 }
                 var resultThreeFourKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand);
                 if (resultThreeFourKind.FourKind)
@@ -45,12 +43,20 @@ namespace Texas_holdem_engine_01
                     item.ThreeOfKind = true;
                     item.HighCard = resultThreeFourKind.ThreeKindValue;
                 }
-                item.Flush = CheckFlush.CheckIfFlush(hand);
-                
-                item.Straight = CheckStraight.CheckIfStraight(hand);
+                var resultStraight = CheckStraight.CheckIfStraight(hand);
+                if (item.Straight)
+                {
+
+                }
+                var resultFlush = CheckFlush.CheckIfFlush(hand);
+                if (item.Flush != ' ')
+                {
+
+                }
                 if (item.ThreeOfKind && item.Pair)
                 {
                     item.FullHouse = true;
+                    item.HighCard = resultThreeFourKind.FourKindValue + resultPairs.PairValue;
                 }
 
                 if (item.Flush != ' ' && item.Straight)
