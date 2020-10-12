@@ -27,7 +27,7 @@ namespace Texas_holdem_engine_01
                     item.Pair = true;
                     item.HighCard = resultPairs.PairValue;
                 }
-                else if (pairs == 2)
+                if (pairs == 2)
                 {
                     item.TwoPair = true;
                     item.HighCard = resultPairs.PairValue;
@@ -44,9 +44,10 @@ namespace Texas_holdem_engine_01
                     item.HighCard = resultThreeFourKind.ThreeKindValue;
                 }
                 var resultStraight = CheckStraight.CheckIfStraight(hand);
-                if (item.Straight)
+                if (resultStraight.Straight)
                 {
-
+                    item.Straight = true;
+                    item.HighCard = resultStraight.StraightValue;
                 }
                 var resultFlush = CheckFlush.CheckIfFlush(hand);
                 if (item.Flush != ' ')

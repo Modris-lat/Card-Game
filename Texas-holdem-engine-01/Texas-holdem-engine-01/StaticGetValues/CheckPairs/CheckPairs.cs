@@ -10,6 +10,7 @@ namespace Texas_holdem_engine_01.Static
     {
         public static ReturnPairValue CheckForPair(List<Card> cards)
         {
+            var pairValue = new ReturnPairValue();
             int countA = 0;
             int countK = 0;
             int countQ = 0;
@@ -23,7 +24,6 @@ namespace Texas_holdem_engine_01.Static
             int count4 = 0;
             int count3 = 0;
             int count2 = 0;
-            var pairValue = new ReturnPairValue();
             foreach (var card in cards)
             {
                 if (card.Rank == '2')

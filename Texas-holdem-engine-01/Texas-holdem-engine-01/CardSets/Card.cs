@@ -26,51 +26,51 @@ namespace Texas_holdem_engine_01
             {
                 CardValue = CardRankings.Rank2;
             }
-            if (Rank == '3')
+            else if (Rank == '3')
             {
                 CardValue = CardRankings.Rank3;
             }
-            if (Rank == '4')
+            else if (Rank == '4')
             {
                 CardValue = CardRankings.Rank4;
             }
-            if (Rank == '5')
+            else if (Rank == '5')
             {
                 CardValue = CardRankings.Rank5;
             }
-            if (Rank == '6')
+            else if (Rank == '6')
             {
                 CardValue = CardRankings.Rank6;
             }
-            if (Rank == '7')
+            else if (Rank == '7')
             {
                 CardValue = CardRankings.Rank7;
             }
-            if (Rank == '8')
+            else if (Rank == '8')
             {
                 CardValue = CardRankings.Rank8;
             }
-            if (Rank == '9')
+            else if (Rank == '9')
             {
                 CardValue = CardRankings.Rank9;
             }
-            if (Rank == 'T')
+            else if (Rank == 'T')
             {
                 CardValue = CardRankings.RankT;
             }
-            if (Rank == 'J')
+            else if (Rank == 'J')
             {
                 CardValue = CardRankings.RankJ;
             }
-            if (Rank == 'Q')
+            else if (Rank == 'Q')
             {
                 CardValue = CardRankings.RankQ;
             }
-            if (Rank == 'K')
+            else if (Rank == 'K')
             {
                 CardValue = CardRankings.RankK;
             }
-            if (Rank == 'A')
+            else if (Rank == 'A')
             {
                 CardValue = CardRankings.RankA;
             }

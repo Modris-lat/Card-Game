@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StaticGetValues\CheckPairs\ReturnPairValue.cs" />
+    <Compile Include="StaticGetValues\CheckStraight\ReturnCheckStraightValues.cs" />
     <Compile Include="StaticGetValues\CheckThreeAndFourKind\ReturnThreeAndFourValues.cs" />
     <Compile Include="StaticGetValues\CardRankings.cs" />
     <Compile Include="Interfaces\ICalculateHanValues.cs" />
@@ -52,7 +53,7 @@
     <Compile Include="StaticGetValues\CheckHighCard.cs" />
     <Compile Include="StaticGetValues\CheckPairs\CheckPairs.cs" />
     <Compile Include="StaticGetValues\CheckRoyalFlush.cs" />
-    <Compile Include="StaticGetValues\CheckStraight.cs" />
+    <Compile Include="StaticGetValues\CheckStraight\CheckStraight.cs" />
     <Compile Include="StaticGetValues\CheckStraightFlush.cs" />
     <Compile Include="StaticGetValues\CheckThreeAndFourKind\CheckThreeAndFourKind.cs" />
     <Compile Include="StaticGetValues\ExtractCards.cs" />
