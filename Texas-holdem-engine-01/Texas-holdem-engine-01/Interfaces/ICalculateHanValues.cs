@@ -8,6 +8,6 @@ namespace Texas_holdem_engine_01.Interfaces
 {
     public interface ICalculateHandValues
     {
-        (IHand, List<IHand>) CalculateCardsValues(IList<Card> table, List<IHand> hands);
+        IHand CalculateCardsValues(IList<Card> table, List<IHand> hands);
     }
 }

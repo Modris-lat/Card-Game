@@ -11,6 +11,7 @@ namespace Texas_holdem_engine_01
     {
         public int Id { get; set; }
         List<Card> Cards;
+        public int Strength { get; set; }
         public bool RoyalFlush { get; set; }
         public bool StraightFl { get; set; }
         public bool FourOfKind { get; set; }
@@ -34,51 +35,51 @@ namespace Texas_holdem_engine_01
         }
         public int GetStrengthOfHand()
         {
-            int totalStrength = HighCard;
+            Strength = HighCard;
             if (TwoPair)
             {
-                totalStrength = 20 + HighCard;
+                Strength = 20 + HighCard;
             }
             else if (Pair)
             {
-                totalStrength = 15 + HighCard;
+                Strength = 15 + HighCard;
             }
 
             if (ThreeOfKind)
             {
-                totalStrength = 25 + HighCard;
+                Strength = 25 + HighCard;
             }
 
             if (Straight)
             {
-                totalStrength = 30 + HighCard;
+                Strength = 30 + HighCard;
             }
 
             if (Flush == 's' || Flush == 'h' || Flush == 'c' || Flush == 'd')
             {
-                totalStrength = 35 + HighCard;
+                Strength = 35 + HighCard;
             }
 
             if (FullHouse)
             {
-                totalStrength = 40 + HighCard;
+                Strength = 40 + HighCard;
             }
 
             if (FourOfKind)
             {
-                totalStrength = 45 + HighCard;
+                Strength = 45 + HighCard;
             }
 
             if (StraightFl)
             {
-                totalStrength = 60 + HighCard;
+                Strength = 60 + HighCard;
             }
 
             if (RoyalFlush)
             {
-                totalStrength = 100;
+                Strength = 100;
             }
-            return totalStrength;
+            return Strength;
         }
 
         public List<Card> GetCards()

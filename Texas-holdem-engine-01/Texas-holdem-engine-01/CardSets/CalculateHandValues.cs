@@ -10,10 +10,9 @@ namespace Texas_holdem_engine_01
 {
     public class CalculateHandValues: ICalculateHandValues
     {
-        public (IHand, List<IHand>) CalculateCardsValues(IList<Card> table, List<IHand> hands)
+        public IHand CalculateCardsValues(IList<Card> table, List<IHand> hands)
         {
             int strongest = 0;
-            var listOfEquals = new List<IHand>() { };
             IHand strongestHand = new Hand();
             foreach (var item in hands)
             {
@@ -36,8 +35,6 @@ namespace Texas_holdem_engine_01
                     item.TwoPair = true;
                 }
                 var resultThreeFourKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand);
-                int threeOfKind = resultThreeFourKind.ThreeKindValue;
-                int fourOfKind = resultThreeFourKind.FourKindValue;
                 if (resultThreeFourKind.FourKind)
                 {
                     item.FourOfKind = true;
@@ -63,11 +60,6 @@ namespace Texas_holdem_engine_01
                 }
 
                 int strength = item.GetStrengthOfHand();
-                if (strength == strongest)
-                {
-                    listOfEquals.Add(strongestHand);
-                    listOfEquals.Add(item);
-                }
                 if (strength > strongest)
                 {
                     strongest = strength;
@@ -76,7 +68,7 @@ namespace Texas_holdem_engine_01
                 
             }
 
-            return (strongestHand, listOfEquals);
+            return strongestHand;
         }
     }
 }

@@ -41,22 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReturnResultClass\ReturnPairValue.cs" />
-    <Compile Include="ReturnResultClass\ReturnThreeAndFourValues.cs" />
+    <Compile Include="StaticGetValues\CheckPairs\ReturnPairValue.cs" />
+    <Compile Include="StaticGetValues\CheckThreeAndFourKind\ReturnThreeAndFourValues.cs" />
     <Compile Include="StaticGetValues\CardRankings.cs" />
     <Compile Include="Interfaces\ICalculateHanValues.cs" />
-    <Compile Include="CalculateHandValues.cs" />
-    <Compile Include="Card.cs" />
-    <Compile Include="CardsOnHandsList.cs" />
+    <Compile Include="CardSets\CalculateHandValues.cs" />
+    <Compile Include="CardSets\Card.cs" />
+    <Compile Include="CardSets\CardsOnHandsList.cs" />
     <Compile Include="StaticGetValues\CheckFlush.cs" />
     <Compile Include="StaticGetValues\CheckHighCard.cs" />
-    <Compile Include="StaticGetValues\CheckPairs.cs" />
+    <Compile Include="StaticGetValues\CheckPairs\CheckPairs.cs" />
     <Compile Include="StaticGetValues\CheckRoyalFlush.cs" />
     <Compile Include="StaticGetValues\CheckStraight.cs" />
     <Compile Include="StaticGetValues\CheckStraightFlush.cs" />
-    <Compile Include="StaticGetValues\CheckThreeAndFourKind.cs" />
+    <Compile Include="StaticGetValues\CheckThreeAndFourKind\CheckThreeAndFourKind.cs" />
     <Compile Include="StaticGetValues\ExtractCards.cs" />
-    <Compile Include="Hand.cs" />
+    <Compile Include="CardSets\Hand.cs" />
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />
     <Compile Include="Interfaces\IGetInput.cs" />
     <Compile Include="InputCards.cs" />
@@ -65,7 +65,7 @@
     <Compile Include="Interfaces\ITable.cs" />
     <Compile Include="OutputHandBlock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Table.cs" />
+    <Compile Include="CardSets\Table.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
