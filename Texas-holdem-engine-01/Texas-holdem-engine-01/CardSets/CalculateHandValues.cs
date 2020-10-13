@@ -19,7 +19,7 @@ namespace Texas_holdem_engine_01
                 var hand = new List<Card>(table);
                 hand.Add(item.GetCards()[0]);
                 hand.Add(item.GetCards()[1]);
-                item.HighCard = CheckHighCard.HighestCard(hand);
+                //item.HighCard = CheckHighCard.HighestCard(hand);
                 var resultPairs = CheckPairs.CheckForPair(hand);
                 int pairs = resultPairs.PairCount;
                 if (pairs == 1)
@@ -50,9 +50,9 @@ namespace Texas_holdem_engine_01
                     item.HighCard = resultStraight.StraightValue;
                 }
                 var resultFlush = CheckFlush.CheckIfFlush(hand);
-                if (item.Flush != ' ')
+                if (resultFlush.Flush)
                 {
-
+                    item.Flush = resultFlush.FlushSuit;
                 }
                 if (item.ThreeOfKind && item.Pair)
                 {

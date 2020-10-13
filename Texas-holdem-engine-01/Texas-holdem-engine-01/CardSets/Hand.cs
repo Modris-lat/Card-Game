@@ -9,8 +9,8 @@ namespace Texas_holdem_engine_01
 {
     public class Hand: IHand
     {
-        public int Id { get; set; }
         List<Card> Cards;
+        public int Id { get; set; }
         public int Strength { get; set; }
         public bool RoyalFlush { get; set; }
         public bool StraightFl { get; set; }
@@ -35,6 +35,13 @@ namespace Texas_holdem_engine_01
         }
         public int GetStrengthOfHand()
         {
+            var valueList = new List<int>() { };
+            foreach (var card in Cards)
+            {
+                valueList.Add(card.CardValue);
+            }
+
+            HighCard = valueList.Max();
             Strength = HighCard;
             if (TwoPair)
             {
