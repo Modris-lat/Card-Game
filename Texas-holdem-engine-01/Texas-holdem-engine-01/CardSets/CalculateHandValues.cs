@@ -72,7 +72,6 @@ namespace Texas_holdem_engine_01
                     strongest = strength;
                     strongestHand = item;
                 }
-                
             }
 
             return strongestHand;

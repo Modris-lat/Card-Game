@@ -15,6 +15,10 @@ namespace Texas_holdem_engine_01.Static
             var result = new ReturnCheckStraightValues();
             foreach (var card in cards)
             {
+                if (card.Rank == 'A')
+                {
+                    card.CardValue = 1;
+                }
                 cardValueList.Add(card.CardValue);
             }
             cardValueList.Sort();
@@ -33,6 +37,10 @@ namespace Texas_holdem_engine_01.Static
                         result.StraightValue = straightValueList.Max();
                         return result;
                     }
+                }
+                else if (sum == 0)
+                {
+                    continue;
                 }
                 else
                 {
