@@ -52,7 +52,6 @@
     <Compile Include="CardRankingTest.cs" />
     <Compile Include="CardsOnHandsListTest.cs" />
     <Compile Include="CheckFlushTest.cs" />
-    <Compile Include="CheckHighestCardTest.cs" />
     <Compile Include="CheckPairsTest.cs" />
     <Compile Include="CheckRoyalFlushTest.cs" />
     <Compile Include="CheckStraightFlushTest.cs" />

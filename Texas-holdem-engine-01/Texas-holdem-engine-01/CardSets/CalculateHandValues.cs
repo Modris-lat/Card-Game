@@ -19,7 +19,6 @@ namespace Texas_holdem_engine_01
                 var hand = new List<Card>(table);
                 hand.Add(item.GetCards()[0]);
                 hand.Add(item.GetCards()[1]);
-                //item.HighCard = CheckHighCard.HighestCard(hand);
                 var resultPairs = CheckPairs.CheckForPair(hand);
                 int pairs = resultPairs.PairCount;
                 if (pairs == 1)

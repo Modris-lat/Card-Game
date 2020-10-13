@@ -51,7 +51,6 @@
     <Compile Include="CardSets\Card.cs" />
     <Compile Include="CardSets\CardsOnHandsList.cs" />
     <Compile Include="StaticGetValues\CheckFlush\CheckFlush.cs" />
-    <Compile Include="StaticGetValues\CheckHighCard.cs" />
     <Compile Include="StaticGetValues\CheckPairs\CheckPairs.cs" />
     <Compile Include="StaticGetValues\CheckRoyalFlush.cs" />
     <Compile Include="StaticGetValues\CheckStraight\CheckStraight.cs" />
