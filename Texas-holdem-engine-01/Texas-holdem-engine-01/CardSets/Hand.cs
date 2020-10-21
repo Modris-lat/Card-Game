@@ -50,7 +50,7 @@ namespace Texas_holdem_engine_01.CardSets
             }
             else if (Flush == 's' || Flush == 'h' || Flush == 'c' || Flush == 'd')
             {
-                Strength = 35;
+                Strength += 35;
             }
             else if (Straight)
             {
@@ -62,7 +62,7 @@ namespace Texas_holdem_engine_01.CardSets
             }
             else if (TwoPair)
             {
-                Strength = 20;
+                Strength += 20;
             }
             else if (Pair)
             {

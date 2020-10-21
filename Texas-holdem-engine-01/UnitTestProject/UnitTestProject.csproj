@@ -50,14 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CalculateHandValuesTest.cs" />
-    <Compile Include="CardRankingTest.cs" />
     <Compile Include="CardsOnHandsListTest.cs" />
-    <Compile Include="CheckFlushTest.cs" />
-    <Compile Include="CheckPairsTest.cs" />
-    <Compile Include="CheckRoyalFlushTest.cs" />
-    <Compile Include="CheckStraightFlushTest.cs" />
-    <Compile Include="CheckStraightTest.cs" />
-    <Compile Include="CheckThreeAndFourOfKindTest.cs" />
     <Compile Include="HandTest.cs" />
     <Compile Include="InputTest.cs" />
     <Compile Include="OutputHandBlockTest.cs" />

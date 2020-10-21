@@ -29,11 +29,11 @@ namespace Texas_holdem_engine_01.CardSets
                     hand.Pair = true;
                     hand.Strength = resultEqualRanks.PairValue;
                 }
-                //else if (pairs == 2)
-                //{
-                //    item.TwoPair = true;
-                //    item.Strength = resultPairs.PairValue;
-                //}
+                else if (pairs == 2)
+                {
+                    hand.TwoPair = true;
+                    hand.Strength = resultEqualRanks.PairValue;
+                }
                 //var resultThreeFourKind = CheckThreeAndFourKind.ThreeAndFourOfKind(hand);
                 //if (resultThreeFourKind.FourKind)
                 //{
@@ -76,7 +76,7 @@ namespace Texas_holdem_engine_01.CardSets
                 }
                 else if (strength == strongest)
                 {
-                    if (hand.GetHighestCard() > strongestHand.GetHighestCard())
+                    if (hand.GetHighestCard() > strongestHand.GetHighestCard() && hand.Pair)
                     {
                         strongestHand = hand;
                     }

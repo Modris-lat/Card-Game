@@ -53,8 +53,7 @@ namespace UnitTestProject
         public void Test_Strength_Of_Hand_Value_Flush()
         {
             Hand.Flush = 's';
-            Hand.FullHouse = false;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 35 + CardRankings.RankK);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 35);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_RoyalFlush()
@@ -74,7 +73,7 @@ namespace UnitTestProject
         {
             Hand.FourOfKind = true;
             Hand.Strength = CardRankings.RankJ;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 50 + CardRankings.RankK + CardRankings.RankJ);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 50 + CardRankings.RankJ);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_FullHouse()
@@ -94,19 +93,19 @@ namespace UnitTestProject
         public void Test_Strength_Of_Hand_Value_ThreeOfKind()
         {
             Hand.ThreeOfKind = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 25 + CardRankings.RankK);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 25);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_TwoPair()
         {
             Hand.TwoPair = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 20 + CardRankings.RankK);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 20);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_Pair()
         {
             Hand.Pair = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 15 + CardRankings.RankK);
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 15);
         }
     }
 }

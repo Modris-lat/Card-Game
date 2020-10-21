@@ -106,5 +106,27 @@ namespace UnitTestProject
             Assert.IsTrue(strongestHand.Pair &&
                           strongestHand.GetCards()[1].CardValue == CardRankings.RankA);
         }
+        [TestMethod]
+        public void Strongest_Hand_With_Two_Pairs()
+        {
+            Input.GetInput("4c3s9h8s7s 3d9h 3h4h QcAh");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            var strongestHand = Calculate.CalculateCardsValues(Table.ShowCardsOnTable(),
+                CardsOnHands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.TwoPair &&
+                          strongestHand.GetCards()[1].CardValue == CardRankings.Rank9);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_Two_Pairs_Equal_Pair_Value()
+        {
+            Input.GetInput("4c3s9h8s7s 3d9h 3h9h QcAh");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            var strongestHand = Calculate.CalculateCardsValues(Table.ShowCardsOnTable(),
+                CardsOnHands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.TwoPair &&
+                          strongestHand.GetCards()[1].CardValue == CardRankings.Rank9);
+        }
     }
 }
