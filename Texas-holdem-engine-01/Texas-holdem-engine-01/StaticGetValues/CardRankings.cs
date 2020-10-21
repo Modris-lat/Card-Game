@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Texas_holdem_engine_01
+﻿namespace Texas_holdem_engine_01.StaticGetValues
 {
-    public class CardRankings
+    public static class CardRankings
     {
         public static int Rank2 = 2;
         public static int Rank3 = 3;

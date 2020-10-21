@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Texas_holdem_engine_01;
+using Texas_holdem_engine_01.CardSets;
+using Texas_holdem_engine_01.Interfaces;
 
 namespace UnitTestProject
 {

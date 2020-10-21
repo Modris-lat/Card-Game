@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Texas_holdem_engine_01.StaticGetValues.CheckStraight;
+using Texas_holdem_engine_01.CardSets;
 
-namespace Texas_holdem_engine_01.Static
+namespace Texas_holdem_engine_01.StaticGetValues.CheckStraight
 {
     public class CheckStraight
     {
-        public static ReturnCheckStraightValues CheckIfStraight(List<Card> cards)
+        public static ReturnCheckStraightValues CheckIfStraight(List<Card> cardsList)
         {
+            var cards = cardsList;
             var cardValueList = new List<int>(){};
             var result = new ReturnCheckStraightValues();
             foreach (var card in cards)

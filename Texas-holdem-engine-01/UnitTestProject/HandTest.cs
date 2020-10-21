@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Texas_holdem_engine_01;
+using Texas_holdem_engine_01.CardSets;
 using Texas_holdem_engine_01.Interfaces;
+using Texas_holdem_engine_01.StaticGetValues;
 
 namespace UnitTestProject
 {
@@ -65,25 +66,29 @@ namespace UnitTestProject
         public void Test_Strength_Of_Hand_Value_StraightFlush()
         {
             Hand.StraightFl = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 60 + CardRankings.RankK);
+            Hand.Strength = CardRankings.RankJ;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 70 + CardRankings.RankJ);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_FourOfKind()
         {
             Hand.FourOfKind = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 45 + CardRankings.RankK);
+            Hand.Strength = CardRankings.RankJ;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 50 + CardRankings.RankK + CardRankings.RankJ);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_FullHouse()
         {
             Hand.FullHouse = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 40 + CardRankings.RankK);
+            Hand.Strength = CardRankings.RankJ;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 40 + CardRankings.RankJ);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_Straight()
         {
             Hand.Straight = true;
-            Assert.IsTrue(Hand.GetStrengthOfHand() == 30 + CardRankings.RankK);
+            Hand.Strength = CardRankings.RankJ;
+            Assert.IsTrue(Hand.GetStrengthOfHand() == 30 + CardRankings.RankJ);
         }
         [TestMethod]
         public void Test_Strength_Of_Hand_Value_ThreeOfKind()

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Texas_holdem_engine_01.StaticGetValues;
 
-namespace Texas_holdem_engine_01
+namespace Texas_holdem_engine_01.CardSets
 {
     public class Card
     {

@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Texas_holdem_engine_01.Interfaces;
+using Texas_holdem_engine_01.StaticGetValues;
 
-namespace Texas_holdem_engine_01
+namespace Texas_holdem_engine_01.CardSets
 {
     public class Table: ITable
     {

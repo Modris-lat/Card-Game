@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="StaticGetValues\CheckFlush\ReturnCheckFlushResult.cs" />
-    <Compile Include="StaticGetValues\CheckPairs\ReturnPairValue.cs" />
+    <Compile Include="StaticGetValues\CheckEqualRanks\CheckEqualRanksResult.cs" />
     <Compile Include="StaticGetValues\CheckStraight\ReturnCheckStraightValues.cs" />
     <Compile Include="StaticGetValues\CheckThreeAndFourKind\ReturnThreeAndFourValues.cs" />
     <Compile Include="StaticGetValues\CardRankings.cs" />
@@ -51,7 +51,7 @@
     <Compile Include="CardSets\Card.cs" />
     <Compile Include="CardSets\CardsOnHandsList.cs" />
     <Compile Include="StaticGetValues\CheckFlush\CheckFlush.cs" />
-    <Compile Include="StaticGetValues\CheckPairs\CheckPairs.cs" />
+    <Compile Include="StaticGetValues\CheckEqualRanks\CheckEqualRanks.cs" />
     <Compile Include="StaticGetValues\CheckRoyalFlush.cs" />
     <Compile Include="StaticGetValues\CheckStraight\CheckStraight.cs" />
     <Compile Include="StaticGetValues\CheckStraightFlush.cs" />

@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Texas_holdem_engine_01;
-using Texas_holdem_engine_01.Static;
+using Texas_holdem_engine_01.CardSets;
+using Texas_holdem_engine_01.StaticGetValues;
+using Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks;
+using Texas_holdem_engine_01.StaticGetValues.CheckPairs;
 
 namespace UnitTestProject
 {
@@ -18,7 +20,7 @@ namespace UnitTestProject
                 new Card('4', 's'), new Card('J', 's'),
                 new Card('6', 's'), new Card('J', 'd')
             };
-            var result = CheckPairs.CheckForPair(cardList);
+            var result = CheckEqualRanks.CheckForEqualRanks(cardList);
             Assert.IsTrue(result.PairCount == 1 && result.PairValue == CardRankings.RankJ);
         }
         [TestMethod]
@@ -30,7 +32,7 @@ namespace UnitTestProject
                 new Card('4', 's'), new Card('5', 's'),
                 new Card('6', 's'), new Card('J', 'd')
             };
-            var result = CheckPairs.CheckForPair(cardList);
+            var result = CheckEqualRanks.CheckForEqualRanks(cardList);
             Assert.IsTrue(result.PairCount == 0 && result.PairValue == 0);
         }
         [TestMethod]
@@ -42,7 +44,7 @@ namespace UnitTestProject
                 new Card('2', 's'), new Card('J', 's'),
                 new Card('6', 's'), new Card('J', 'd')
             };
-            var result = CheckPairs.CheckForPair(cardList);
+            var result = CheckEqualRanks.CheckForEqualRanks(cardList);
             Assert.IsTrue(result.PairCount == 2 &&
                           result.PairValue == CardRankings.Rank2 + CardRankings.RankJ);
         }
@@ -55,7 +57,7 @@ namespace UnitTestProject
                 new Card('2', 's'), new Card('2', 's'),
                 new Card('6', 's'), new Card('2', 'd')
             };
-            var result = CheckPairs.CheckForPair(cardList);
+            var result = CheckEqualRanks.CheckForEqualRanks(cardList);
             Assert.IsFalse(result.PairCount == 2 &&
                           result.PairValue == CardRankings.Rank2 + CardRankings.Rank2);
         }

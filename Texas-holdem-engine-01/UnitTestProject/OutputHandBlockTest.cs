@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Texas_holdem_engine_01;
+using Texas_holdem_engine_01.CardSets;
 using Texas_holdem_engine_01.Interfaces;
 
 namespace UnitTestProject
@@ -9,9 +9,9 @@ namespace UnitTestProject
     public class OutputHandBlockTest
     {
         private IOutput Output;
-        private ITable Table;
-        private ICardsOnHandsList CardsOnHands;
-        private IGetInput Input;
+        private readonly ITable Table;
+        private readonly ICardsOnHandsList CardsOnHands;
+        private readonly IGetInput Input;
         private ICalculateHandValues Calculate;
 
         public OutputHandBlockTest()

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Texas_holdem_engine_01.Interfaces;
 
-namespace Texas_holdem_engine_01
+namespace Texas_holdem_engine_01.CardSets
 {
     public class Hand: IHand
     {
@@ -35,60 +32,54 @@ namespace Texas_holdem_engine_01
         }
         public int GetStrengthOfHand()
         {
-            var valueList = new List<int>() { };
-            foreach (var card in Cards)
-            {
-                valueList.Add(card.CardValue);
-            }
-
-            HighCard = valueList.Max();
-            Strength = HighCard;
-            if (TwoPair)
-            {
-                Strength = 20 + HighCard;
-            }
-            else if (Pair)
-            {
-                Strength = 15 + HighCard;
-            }
-
-            if (ThreeOfKind)
-            {
-                Strength = 25 + HighCard;
-            }
-
-            if (Straight)
-            {
-                Strength = 30 + HighCard;
-            }
-
-            if (Flush == 's' || Flush == 'h' || Flush == 'c' || Flush == 'd')
-            {
-                Strength = 35 + HighCard;
-            }
-
-            if (FullHouse)
-            {
-                Strength = 40 + HighCard;
-            }
-
-            if (FourOfKind)
-            {
-                Strength = 45 + HighCard;
-            }
-
-            if (StraightFl)
-            {
-                Strength = 60 + HighCard;
-            }
-
             if (RoyalFlush)
             {
                 Strength = 100;
             }
+            else if (StraightFl)
+            {
+                Strength += 70;
+            }
+            else if (FourOfKind)
+            {
+                Strength += 50;
+            }
+            else if (FullHouse)
+            {
+                Strength += 40;
+            }
+            else if (Flush == 's' || Flush == 'h' || Flush == 'c' || Flush == 'd')
+            {
+                Strength = 35;
+            }
+            else if (Straight)
+            {
+                Strength += 30;
+            }
+            else if (ThreeOfKind)
+            {
+                Strength += 25;
+            }
+            else if (TwoPair)
+            {
+                Strength = 20;
+            }
+            else if (Pair)
+            {
+                Strength += 15;
+            }
+            else
+            {
+                Strength = GetHighestCard();
+            }
             return Strength;
         }
 
+        public int GetHighestCard()
+        {
+            HighCard = Cards.Max(card => card.CardValue);
+            return HighCard;
+        }
         public List<Card> GetCards()
         {
             return Cards;

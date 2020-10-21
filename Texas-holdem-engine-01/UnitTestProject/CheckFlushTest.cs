@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Texas_holdem_engine_01;
-using Texas_holdem_engine_01.Static;
+using Texas_holdem_engine_01.CardSets;
+using Texas_holdem_engine_01.StaticGetValues.CheckFlush;
 
 namespace UnitTestProject
 {
