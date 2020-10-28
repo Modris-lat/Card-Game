@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Texas_holdem_engine_01.CardSets;
-using Texas_holdem_engine_01.StaticGetValues.CheckPairs;
 
 namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
 {
@@ -19,7 +18,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count2 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank2;
             }
             else if (count2 == 4)
             {
@@ -34,7 +34,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count3 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank3;
             }
             else if (count3 == 4)
             {
@@ -49,7 +50,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count4 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank4;
             }
             else if (count4 == 4)
             {
@@ -64,7 +66,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count5 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank5;
             }
             else if (count5 == 4)
             {
@@ -79,7 +82,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count6 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank6;
             }
             else if (count6 == 4)
             {
@@ -94,7 +98,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count7 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank7;
             }
             else if (count7 == 4)
             {
@@ -109,7 +114,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count8 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank8;
             }
             else if (count8 == 4)
             {
@@ -124,7 +130,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count9 == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.Rank9;
             }
             else if (count9 == 4)
             {
@@ -139,7 +146,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countT == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.RankT;
             }
             else if (countT == 4)
             {
@@ -154,7 +162,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countJ == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.RankJ;
             }
             else if (countJ == 4)
             {
@@ -169,7 +178,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countQ == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.RankQ;
             }
             else if (countQ == 4)
             {
@@ -184,7 +194,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countK == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.RankK;
             }
             else if (countK == 4)
             {
@@ -199,132 +210,13 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countA == 3)
             {
-
+                result.ThreeOfKind = true;
+                result.ThreeOfKindValue = CardRankings.RankA;
             }
             else if (countA == 4)
             {
 
             }
-            //foreach (var card in cards)
-            //{
-            //    if (card.Rank == '2')
-            //    {
-            //        count2++;
-            //        if (count2 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank2;
-            //        }
-            //    }
-            //    else if (card.Rank == '3')
-            //    {
-            //        count3++;
-            //        if (count3 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank3;
-            //        }
-            //    }
-            //    else if (card.Rank == '4')
-            //    {
-            //        count4++;
-            //        if (count4 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank4;
-            //        }
-            //    }
-            //    else if (card.Rank == '5')
-            //    {
-            //        count5++;
-            //        if (count5 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank5;
-            //        }
-            //    }
-            //    else if (card.Rank == '6')
-            //    {
-            //        count6++;
-            //        if (count6 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank6;
-            //        }
-            //    }
-            //    else if (card.Rank == '7')
-            //    {
-            //        count7++;
-            //        if (count7 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank7;
-            //        }
-            //    }
-            //    else if (card.Rank == '8')
-            //    {
-            //        count8++;
-            //        if (count8 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank8;
-            //        }
-            //    }
-            //    else if (card.Rank == '9')
-            //    {
-            //        count9++;
-            //        if (count9 == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.Rank9;
-            //        }
-            //    }
-            //    else if (card.Rank == 'T')
-            //    {
-            //        countT++;
-            //        if (countT == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.RankT;
-            //        }
-            //    }
-            //    else if (card.Rank == 'J')
-            //    {
-            //        countJ++;
-            //        if (countJ == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.RankJ;
-            //        }
-            //    }
-            //    else if (card.Rank == 'Q')
-            //    {
-            //        countQ++;
-            //        if (countQ == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.RankQ;
-            //        }
-            //    }
-            //    else if (card.Rank == 'K')
-            //    {
-            //        countK++;
-            //        if (countK == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.RankK;
-            //        }
-            //    }
-            //    else if (card.Rank == 'A')
-            //    {
-            //        countA++;
-            //        if (countA == 2)
-            //        {
-            //            result.PairCount++;
-            //            result.PairValue += CardRankings.RankA;
-            //        }
-            //    }
-            //}
             return result;
         }
     }

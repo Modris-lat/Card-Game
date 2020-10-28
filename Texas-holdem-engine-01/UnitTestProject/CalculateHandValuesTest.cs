@@ -128,5 +128,38 @@ namespace UnitTestProject
             Assert.IsTrue(strongestHand.TwoPair &&
                           strongestHand.GetCards()[1].CardValue == CardRankings.Rank9);
         }
+        [TestMethod]
+        public void Strongest_Hand_With_ThreeOfKind()
+        {
+            Input.GetInput("4c3s9h8s7s 3d3h JhKh QcAh");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            var strongestHand = Calculate.CalculateCardsValues(Table.ShowCardsOnTable(),
+                CardsOnHands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.ThreeOfKind &&
+                          strongestHand.GetCards()[1].CardValue == CardRankings.Rank3);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_ThreeOfKind_In_Two_Hands()
+        {
+            Input.GetInput("4c3s9h8s7s 3d3h JhKh 9c9s");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            var strongestHand = Calculate.CalculateCardsValues(Table.ShowCardsOnTable(),
+                CardsOnHands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.ThreeOfKind &&
+                          strongestHand.GetCards()[1].CardValue == CardRankings.Rank9);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_ThreeOfKind_In_Two_Hands_Equal()
+        {
+            Input.GetInput("4c3s9h9s7s 9d3h JhKh 9cAs");
+            Table.GetCardsOnTable();
+            CardsOnHands.AddCardsToHandsList();
+            var strongestHand = Calculate.CalculateCardsValues(Table.ShowCardsOnTable(),
+                CardsOnHands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.ThreeOfKind &&
+                          strongestHand.GetCards()[1].CardValue == CardRankings.RankA);
+        }
     }
 }
