@@ -8,15 +8,14 @@ namespace Texas_holdem_engine_01.CardSets
         public char Suit { get; set; }
         public int CardValue { get; set; }
 
-        public Card() { }
-
         public Card(char rank, char suit)
         {
             Rank = rank;
             Suit = suit;
+            SetCardValue();
         }
 
-        public void SetCardValue()
+        void SetCardValue()
         {
             if (Rank == '2')
             {

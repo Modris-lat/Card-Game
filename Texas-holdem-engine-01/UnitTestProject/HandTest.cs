@@ -15,9 +15,7 @@ namespace UnitTestProject
         public HandTest()
         {
             var card1 = new Card('K', 's');
-            card1.SetCardValue();
             var card2 = new Card('7', 'd');
-            card1.SetCardValue();
             Hand = new Hand(1, new List<Card>{card1, card2});
         }
         [TestMethod]

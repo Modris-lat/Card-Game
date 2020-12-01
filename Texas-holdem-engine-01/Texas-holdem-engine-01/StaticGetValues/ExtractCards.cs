@@ -14,7 +14,6 @@ namespace Texas_holdem_engine_01.StaticGetValues
                 {
                     string cardString = cards.Substring(i - 1, 2);
                     var card = new Card(cardString[0], cardString[1]);
-                    card.SetCardValue();
                     cardList.Add(card);
                 }
             }
