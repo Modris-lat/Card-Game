@@ -4,7 +4,7 @@ namespace Texas_holdem_engine_01.Interfaces
 {
     public interface ICardsOnHandsList
     {
-        void AddCardsToHandsList();
+        void AddHands(List<string> hands);
         List<IHand> ShowCardsOnHandsList();
         void RemoveHand(int id);
     }

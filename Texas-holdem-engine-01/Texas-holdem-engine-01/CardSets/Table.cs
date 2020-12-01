@@ -6,23 +6,20 @@ namespace Texas_holdem_engine_01.CardSets
 {
     public class Table: ITable
     {
-        private IGetInput Input;
-        private List<Card> CardsListOnTable;
+        private List<Card> _cardsListOnTable;
 
-        public Table(IGetInput input)
+        public Table()
         {
-            Input = input;
-            CardsListOnTable = new List<Card>(){};
+            _cardsListOnTable = new List<Card>{};
         }
-        public void GetCardsOnTable()
+        public void GetCardsOnTable(string inputTableCards)
         {
-            string str = Input.ShowInput()[0];
-            CardsListOnTable = ExtractCards.ExtractListOfCards(str);
+            _cardsListOnTable = ExtractCards.ExtractListOfCards(inputTableCards);
         }
 
         public IList<Card> ShowCardsOnTable()
         {
-            return CardsListOnTable;
+            return _cardsListOnTable;
         }
     }
 }

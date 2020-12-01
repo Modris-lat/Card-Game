@@ -59,8 +59,6 @@
     <Compile Include="StaticGetValues\ExtractCards.cs" />
     <Compile Include="CardSets\Hand.cs" />
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />
-    <Compile Include="Interfaces\IGetInput.cs" />
-    <Compile Include="InputCards.cs" />
     <Compile Include="Interfaces\IHand.cs" />
     <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Interfaces\ITable.cs" />

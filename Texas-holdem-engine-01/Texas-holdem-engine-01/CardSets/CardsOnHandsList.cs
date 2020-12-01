@@ -7,38 +7,34 @@ namespace Texas_holdem_engine_01.CardSets
 {
     public class CardsOnHandsList: ICardsOnHandsList
     {
-        private List<IHand> CardsOnHands;
-        private IGetInput Input;
+        private List<IHand> _hands;
 
-        public CardsOnHandsList(IGetInput input)
+        public CardsOnHandsList()
         {
-            CardsOnHands = new List<IHand>(){};
-            Input = input;
+            _hands = new List<IHand>(){};
         }
 
-        public void AddCardsToHandsList()
+        public void AddHands(List<string> hands)
         {
-            var list = Input.ShowInput();
-            list.RemoveAt(0);
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < hands.Count; i++)
             {
-                var hand = list[i];
+                var hand = hands[i];
                 var listOfCardsInHand = ExtractCards.ExtractListOfCards(hand);
-                CardsOnHands.Add(new Hand(i, listOfCardsInHand));
+                _hands.Add(new Hand(i, listOfCardsInHand));
             }
         }
 
         public List<IHand> ShowCardsOnHandsList()
         {
-            return CardsOnHands;
+            return _hands;
         }
 
         public void RemoveHand(int id)
         {
-            var hand = CardsOnHands.SingleOrDefault(h => id == h.Id);
+            var hand = _hands.SingleOrDefault(h => id == h.Id);
             if(hand != null)
             {
-                CardsOnHands.Remove(hand);
+                _hands.Remove(hand);
             }
         }
     }

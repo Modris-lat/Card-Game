@@ -13,6 +13,7 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using API.Service.Areas.HelpPage.ModelDescriptions;
 using API.Service.Areas.HelpPage.Models;
+using API.Service.Areas.HelpPage.SampleGeneration;
 
 namespace API.Service.Areas.HelpPage
 {

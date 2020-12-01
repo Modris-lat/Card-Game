@@ -52,7 +52,6 @@
     <Compile Include="CalculateHandValuesTest.cs" />
     <Compile Include="CardsOnHandsListTest.cs" />
     <Compile Include="HandTest.cs" />
-    <Compile Include="InputTest.cs" />
     <Compile Include="OutputHandBlockTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetCardValuesTest.cs" />
