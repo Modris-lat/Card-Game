@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Texas_holdem_engine_01;
 using Texas_holdem_engine_01.CardSets;
 using Texas_holdem_engine_01.StaticGetValues;
 

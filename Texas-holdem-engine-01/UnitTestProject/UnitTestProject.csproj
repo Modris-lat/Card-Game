@@ -56,7 +56,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SetCardValuesTest.cs" />
     <Compile Include="TableTest.cs" />
-    <Compile Include="CardTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

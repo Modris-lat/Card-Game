@@ -44,7 +44,6 @@
     <Compile Include="StaticGetValues\CheckFlush\ReturnCheckFlushResult.cs" />
     <Compile Include="StaticGetValues\CheckEqualRanks\CheckEqualRanksResult.cs" />
     <Compile Include="StaticGetValues\CheckStraight\ReturnCheckStraightValues.cs" />
-    <Compile Include="StaticGetValues\CheckThreeAndFourKind\ReturnThreeAndFourValues.cs" />
     <Compile Include="StaticGetValues\CardRankings.cs" />
     <Compile Include="Interfaces\ICalculateHanValues.cs" />
     <Compile Include="CardSets\CalculateHandValues.cs" />
@@ -55,7 +54,6 @@
     <Compile Include="StaticGetValues\CheckRoyalFlush.cs" />
     <Compile Include="StaticGetValues\CheckStraight\CheckStraight.cs" />
     <Compile Include="StaticGetValues\CheckStraightFlush.cs" />
-    <Compile Include="StaticGetValues\CheckThreeAndFourKind\CheckThreeAndFourKind.cs" />
     <Compile Include="StaticGetValues\ExtractCards.cs" />
     <Compile Include="CardSets\Hand.cs" />
     <Compile Include="Interfaces\ICardsOnHandsList.cs" />

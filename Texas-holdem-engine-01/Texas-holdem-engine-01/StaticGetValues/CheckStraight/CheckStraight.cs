@@ -9,7 +9,7 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckStraight
         public static ReturnCheckStraightValues CheckIfStraight(List<Card> cardsList)
         {
             var cards = cardsList;
-            var cardValueList = new List<int>(){};
+            var cardValueList = new List<int>{};
             var result = new ReturnCheckStraightValues();
             foreach (var card in cards)
             {
@@ -36,10 +36,7 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckStraight
                         return result;
                     }
                 }
-                else if (sum == 0)
-                {
-                    continue;
-                }
+                else if (sum == 0) { }
                 else
                 {
                     count = 0;

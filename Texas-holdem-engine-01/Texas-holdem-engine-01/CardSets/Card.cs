@@ -4,8 +4,8 @@ namespace Texas_holdem_engine_01.CardSets
 {
     public class Card
     {
-        public char Rank { get; set; }
-        public char Suit { get; set; }
+        public char Rank { get; }
+        public char Suit { get; }
         public int CardValue { get; set; }
 
         public Card(char rank, char suit)

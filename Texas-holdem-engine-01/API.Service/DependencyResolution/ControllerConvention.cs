@@ -21,8 +21,6 @@ using StructureMap.Graph.Scanning;
 namespace API.Service.DependencyResolution {
     using System;
     using System.Web.Mvc;
-
-    using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
     using StructureMap.Pipeline;
     using StructureMap.TypeRules;

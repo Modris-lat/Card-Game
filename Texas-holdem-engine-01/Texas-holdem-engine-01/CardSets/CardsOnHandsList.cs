@@ -11,7 +11,7 @@ namespace Texas_holdem_engine_01.CardSets
 
         public CardsOnHandsList()
         {
-            _hands = new List<IHand>(){};
+            _hands = new List<IHand>{};
         }
 
         public void AddHands(List<string> hands)

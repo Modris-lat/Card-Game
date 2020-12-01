@@ -23,7 +23,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count2 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank2;
             }
             var listOf3 = cards.Where(card => card.Rank == '3');
             int count3 = listOf3.Count();
@@ -39,7 +40,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count3 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank3;
             }
             var listOf4 = cards.Where(card => card.Rank == '4');
             int count4 = listOf4.Count();
@@ -55,7 +57,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count4 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank4;
             }
             var listOf5 = cards.Where(card => card.Rank == '5');
             int count5 = listOf5.Count();
@@ -71,7 +74,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count5 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank5;
             }
             var listOf6 = cards.Where(card => card.Rank == '6');
             int count6 = listOf6.Count();
@@ -87,7 +91,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count6 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank6;
             }
             var listOf7 = cards.Where(card => card.Rank == '7');
             int count7 = listOf7.Count();
@@ -103,7 +108,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count7 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank7;
             }
             var listOf8 = cards.Where(card => card.Rank == '8');
             int count8 = listOf8.Count();
@@ -119,7 +125,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count8 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank8;
             }
             var listOf9 = cards.Where(card => card.Rank == '9');
             int count9 = listOf9.Count();
@@ -135,7 +142,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (count9 == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.Rank9;
             }
             var listOfT = cards.Where(card => card.Rank == 'T');
             int countT = listOfT.Count();
@@ -151,7 +159,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countT == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.RankT;
             }
             var listOfJ = cards.Where(card => card.Rank == 'J');
             int countJ = listOfJ.Count();
@@ -167,7 +176,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countJ == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.RankJ;
             }
             var listOfQ = cards.Where(card => card.Rank == 'Q');
             int countQ = listOfQ.Count();
@@ -183,7 +193,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countQ == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.RankQ;
             }
             var listOfK = cards.Where(card => card.Rank == 'K');
             int countK = listOfK.Count();
@@ -199,7 +210,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countK == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.RankK;
             }
             var listOfA = cards.Where(card => card.Rank == 'A');
             int countA = listOfA.Count();
@@ -215,7 +227,8 @@ namespace Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks
             }
             else if (countA == 4)
             {
-
+                result.FourOfKind = true;
+                result.FourOfKindValue = CardRankings.RankA;
             }
             return result;
         }

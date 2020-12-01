@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Texas_holdem_engine_01;
 using Texas_holdem_engine_01.CardSets;
 using Texas_holdem_engine_01.Interfaces;
 using Texas_holdem_engine_01.StaticGetValues;
@@ -172,8 +170,43 @@ namespace UnitTestProject
             });
             var strongestHand = _calculate.CalculateCardsValues(
                 _table.ShowCardsOnTable(), _hands.ShowCardsOnHandsList());
-            Assert.IsTrue(strongestHand.ThreeOfKind &&
-                          strongestHand.GetCards()[1].CardValue == CardRankings.RankA);
+            Assert.IsTrue(strongestHand.ThreeOfKind && strongestHand.FullHouse && strongestHand.Id == 0);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_FourOfKind_False()
+        {
+            _table.GetCardsOnTable("4c3s9h9s7s");
+            _hands.AddHands(new List<string>
+            {
+                "9d3h", "JhKh", "9cAs"
+            });
+            var strongestHand = _calculate.CalculateCardsValues(
+                _table.ShowCardsOnTable(), _hands.ShowCardsOnHandsList());
+            Assert.IsFalse(strongestHand.FourOfKind);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_FourOfKind_True()
+        {
+            _table.GetCardsOnTable("3c3s9h9s7s");
+            _hands.AddHands(new List<string>
+            {
+                "3d3h", "JhKh", "9cAs"
+            });
+            var strongestHand = _calculate.CalculateCardsValues(
+                _table.ShowCardsOnTable(), _hands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.FourOfKind);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_Two_FourOfKind_True()
+        {
+            _table.GetCardsOnTable("3c3s9h9s7s");
+            _hands.AddHands(new List<string>
+            {
+                "3d3h", "JhKh", "9c9d"
+            });
+            var strongestHand = _calculate.CalculateCardsValues(
+                _table.ShowCardsOnTable(), _hands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.FourOfKind && strongestHand.Id == 2);
         }
     }
 }
