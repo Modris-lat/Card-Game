@@ -1,12 +1,12 @@
-﻿using Texas_holdem_engine_01.StaticGetValues;
+﻿using Engine.Rankings;
 
-namespace Texas_holdem_engine_01.CardSets
+namespace Engine.Models
 {
     public class Card
     {
         public char Rank { get; }
         public char Suit { get; }
-        public int CardValue { get; set; }
+        public int CardValue { get; private set; }
 
         public Card(char rank, char suit)
         {

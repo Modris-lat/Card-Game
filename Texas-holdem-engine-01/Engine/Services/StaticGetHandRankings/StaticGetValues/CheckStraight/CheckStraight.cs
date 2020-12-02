@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Texas_holdem_engine_01.CardSets;
+using Engine.Models;
 
-namespace Texas_holdem_engine_01.StaticGetValues.CheckStraight
+namespace Engine.Services.StaticGetHandRankings.StaticGetValues.CheckStraight
 {
     public static class CheckStraight
     {

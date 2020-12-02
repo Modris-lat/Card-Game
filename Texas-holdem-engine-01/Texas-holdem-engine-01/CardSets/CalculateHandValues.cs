@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Texas_holdem_engine_01.Interfaces;
+using Texas_holdem_engine_01.StaticGetValues;
 using Texas_holdem_engine_01.StaticGetValues.CheckEqualRanks;
+using Texas_holdem_engine_01.StaticGetValues.CheckFlush;
+using Texas_holdem_engine_01.StaticGetValues.CheckStraight;
 
 namespace Texas_holdem_engine_01.CardSets
 {
@@ -11,7 +14,7 @@ namespace Texas_holdem_engine_01.CardSets
         {
             int strongest = 0;
             IHand strongestHand = new Hand();
-            //var HighestCard = hands.Max(hand => hand.GetHighestCard());
+            var highestCard = hands.Max(hand => hand.GetHighestCard());
             foreach (var hand in hands)
             {
                 var tableCards = table.ToList();
@@ -39,6 +42,7 @@ namespace Texas_holdem_engine_01.CardSets
                 if (resultEqualRanks.ThreeOfKind && pairs == 1)
                 {
                     hand.FullHouse = true;
+                    hand.Strength = resultEqualRanks.PairValue + resultEqualRanks.ThreeOfKindValue;
                 }
 
                 if (resultEqualRanks.FourOfKind)

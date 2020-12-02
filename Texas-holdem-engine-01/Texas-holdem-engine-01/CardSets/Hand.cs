@@ -6,7 +6,7 @@ namespace Texas_holdem_engine_01.CardSets
 {
     public class Hand: IHand
     {
-        List<Card> Cards;
+        private List<Card> Cards { get; }
         public int Id { get; set; }
         public int Strength { get; set; }
         public bool RoyalFlush { get; set; }

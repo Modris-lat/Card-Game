@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Engine.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Texas_holdem_engine_01.CardSets;
 using Texas_holdem_engine_01.Interfaces;
@@ -207,6 +208,18 @@ namespace UnitTestProject
             var strongestHand = _calculate.CalculateCardsValues(
                 _table.ShowCardsOnTable(), _hands.ShowCardsOnHandsList());
             Assert.IsTrue(strongestHand.FourOfKind && strongestHand.Id == 2);
+        }
+        [TestMethod]
+        public void Strongest_Hand_With_Straight()
+        {
+            _table.GetCardsOnTable("3c5s9h6s7s");
+            _hands.AddHands(new List<string>
+            {
+                "3d3h", "JhKh", "8c9d"
+            });
+            var strongestHand = _calculate.CalculateCardsValues(
+                _table.ShowCardsOnTable(), _hands.ShowCardsOnHandsList());
+            Assert.IsTrue(strongestHand.Straight && strongestHand.Id == 2);
         }
     }
 }

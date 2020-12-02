@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace API.Service.Models
+namespace Engine.Models
 {
     public class GameInput
     {

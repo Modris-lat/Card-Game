@@ -15,6 +15,8 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
+using Engine;
+using Engine.Interfaces;
 using StructureMap;
 
 namespace API.Service.DependencyResolution {
@@ -28,7 +30,7 @@ namespace API.Service.DependencyResolution {
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-            //For<IExample>().Use<Example>();
+            For<IGetCards>().Use<GetCards>();
         }
 
         #endregion
