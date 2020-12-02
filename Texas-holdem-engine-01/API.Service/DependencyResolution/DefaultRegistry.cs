@@ -17,6 +17,7 @@
 
 using Engine;
 using Engine.Interfaces;
+using Engine.Services;
 using StructureMap;
 
 namespace API.Service.DependencyResolution {
@@ -31,6 +32,7 @@ namespace API.Service.DependencyResolution {
 					scan.With(new ControllerConvention());
                 });
             For<IGetCards>().Use<GetCards>();
+            For<IGetHandValues>().Use<GetHandValues>();
         }
 
         #endregion

@@ -10,7 +10,7 @@ namespace API.Service.Controllers
 {
     public class DefaultController : BasicApiController
     {
-        public DefaultController(IGetCards getCards): base(getCards) { }
+        public DefaultController(IGetCards getCards, IGetHandValues getHandValues): base(getCards, getHandValues) { }
         [HttpPost, Route("api/cardgame/input")]
         public IHttpActionResult GameInput(GameInput input)
         {
@@ -19,8 +19,9 @@ namespace API.Service.Controllers
                 return BadRequest();
             }
 
-            var result = _getCards.ConvertInput(input);
-            return Ok(result.Item2);
+            var cardLists = _getCards.ConvertInput(input);
+            var getValues = _getHandValues.Calculate(cardLists.Item1, cardLists.Item2).ToList();
+            return Ok(getValues);
         }
     }
 }

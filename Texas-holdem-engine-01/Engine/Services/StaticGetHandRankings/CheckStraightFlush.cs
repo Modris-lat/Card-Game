@@ -2,7 +2,6 @@
 using System.Linq;
 using Engine.Models;
 using Engine.Rankings;
-using Engine.Services.StaticGetHandRankings.StaticGetValues.CheckForStraightAndFlush;
 
 namespace Engine.Services.StaticGetHandRankings
 {

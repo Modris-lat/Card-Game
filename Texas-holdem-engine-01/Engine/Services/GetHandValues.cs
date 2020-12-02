@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Engine.Interfaces;
 using Engine.Models;
+using Engine.Rankings;
 using Engine.Services.StaticGetHandRankings;
+using Engine.Services.StaticGetHandRankings.StaticGetValues.CheckEqualRanks;
 
 namespace Engine.Services
 {
@@ -17,11 +19,15 @@ namespace Engine.Services
             {
                 var handAndTableCards = new List<Card>(table);
                 handAndTableCards.AddRange(hands[i].Cards);
+                CheckEqualRanksResult equalRanksResult = CheckEqualRanks.CheckForEqualRanks(handAndTableCards);
                 hands[i].HandStrength = CheckRoyalFlush.RoyalFlush(handAndTableCards);
                 if(hands[i].HandStrength == 0) 
                     hands[i].HandStrength = CheckStraightFlush.GetResult(handAndTableCards);
-                //if (hands[i].HandStrength == 0)
-                //    hands[i].HandStrength = CheckStraightFlush.GetResult(handAndTableCards);
+                if (hands[i].HandStrength == 0 && equalRanksResult.FourOfKind)
+                    hands[i].HandStrength = HandRankings.FourOfAKind + equalRanksResult.FourOfKindValue;
+                if (hands[i].HandStrength == 0)
+                    hands[i].HandStrength = CheckFullHouse.GetResult(handAndTableCards);
+
             }
 
             var handsOrderByValue = hands.OrderByDescending(h => h.HandStrength);

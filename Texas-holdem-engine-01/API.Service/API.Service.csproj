@@ -273,10 +273,6 @@
       <Project>{d4a3217e-4348-4974-b3b7-bb91d2a4f8a0}</Project>
       <Name>Engine</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Texas-holdem-engine-01\Texas-holdem-engine-01.csproj">
-      <Project>{df433789-6afd-44fd-af59-232aa95efdce}</Project>
-      <Name>Texas-holdem-engine-01</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

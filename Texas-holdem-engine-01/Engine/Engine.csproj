@@ -54,8 +54,8 @@
     <Compile Include="Services\StaticGetHandRankings\CheckEqualRanks\CheckEqualRanks.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckEqualRanks\CheckEqualRanksResult.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckFlush.cs" />
+    <Compile Include="Services\StaticGetHandRankings\CheckFullHouse.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckStraightFlush.cs" />
-    <Compile Include="Services\StaticGetHandRankings\StaticGetValues\CheckForStraightAndFlush\StraightFlushResult.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckRoyalFlush.cs" />
     <Compile Include="Services\StaticGetHandRankings\StaticGetValues\CheckStraight\CheckStraight.cs" />
     <Compile Include="Services\StaticGetHandRankings\StaticGetValues\CheckStraight\ReturnCheckStraightValues.cs" />
