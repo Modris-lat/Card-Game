@@ -6,29 +6,18 @@ namespace Engine.Services.StaticGetHandRankings
 {
     public static class CheckFlush
     {
-        public static char CheckIfFlush(List<Card> list)
+        public static (char, int) CheckIfFlush(List<Card> list)
         {
-            var hList = list.Where(card => card.Suit == 'h');
-            var sList = list.Where(card => card.Suit == 's');
-            var dList = list.Where(card => card.Suit == 'd');
-            var cList = list.Where(card => card.Suit == 'c');
-            if (sList.Count() >= 5)
+            var groups = list.GroupBy(c => c.Suit);
+            foreach (var group in groups)
             {
-                return 's';
+                if (group.Count() == 5)
+                {
+                    var highestValue = group.Max(c => c.CardValue);
+                    return (group.Key, highestValue);
+                }
             }
-            if (hList.Count() >= 5)
-            {
-                return 'h';
-            }
-            if (cList.Count() >= 5)
-            {
-                return 'c';
-            }
-            if (dList.Count() >= 5)
-            {
-                return 'd';
-            }
-            return ' ';
+            return (' ', 0);
         }
     }
 }

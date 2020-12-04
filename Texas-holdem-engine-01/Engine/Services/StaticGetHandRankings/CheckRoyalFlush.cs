@@ -9,12 +9,12 @@ namespace Engine.Services.StaticGetHandRankings
     {
         public static int RoyalFlush(List<Card> cards)
         {
-            char flushSuit = CheckFlush.CheckIfFlush(cards);
-            var royalFlush = cards.Where(card => card.Rank == 'T' && card.Suit == flushSuit ||
-                                              card.Rank == 'J' && card.Suit == flushSuit ||
-                                              card.Rank == 'Q' && card.Suit == flushSuit ||
-                                              card.Rank == 'K' && card.Suit == flushSuit ||
-                                              card.Rank == 'A' && card.Suit == flushSuit);
+            var flushSuit = CheckFlush.CheckIfFlush(cards);
+            var royalFlush = cards.Where(card => card.Rank == 'T' && card.Suit == flushSuit.Item1 ||
+                                              card.Rank == 'J' && card.Suit == flushSuit.Item1 ||
+                                              card.Rank == 'Q' && card.Suit == flushSuit.Item1 ||
+                                              card.Rank == 'K' && card.Suit == flushSuit.Item1 ||
+                                              card.Rank == 'A' && card.Suit == flushSuit.Item1);
             if (royalFlush.Count() >= 5)
             {
                 return HandRankings.RoyalFlush;

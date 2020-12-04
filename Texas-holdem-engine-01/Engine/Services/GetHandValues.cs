@@ -30,8 +30,8 @@ namespace Engine.Services
                 if (hands[i].HandStrength == 0)
                 {
                     var flush = CheckFlush.CheckIfFlush(handAndTableCards);
-                    if (flush != ' ')
-                        hands[i].HandStrength = HandRankings.Flush;
+                    if (flush.Item1 != ' ')
+                        hands[i].HandStrength = HandRankings.Flush + flush.Item2;
                 }
 
                 if (hands[i].HandStrength == 0)

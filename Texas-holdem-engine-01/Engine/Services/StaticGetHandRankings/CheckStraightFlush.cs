@@ -10,7 +10,7 @@ namespace Engine.Services.StaticGetHandRankings
         public static int GetResult(List<Card> cards)
         {
             var suit = CheckFlush.CheckIfFlush(cards);
-            var suitList = cards.Where(c => c.Suit == suit);
+            var suitList = cards.Where(c => c.Suit == suit.Item1);
             var cardValueList = new List<int> { };
             foreach (var card in suitList)
             {

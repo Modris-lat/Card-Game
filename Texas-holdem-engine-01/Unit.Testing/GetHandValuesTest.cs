@@ -182,7 +182,7 @@ namespace Unit.Testing
             var result = _getValues.Calculate(table, hands).ToList();
             Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA &&
                           result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse + CardRankings.RankK &&
-                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush);
+                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush + CardRankings.RankQ);
         }
         [TestMethod]
         public void Test_Straight_True()
@@ -205,7 +205,7 @@ namespace Unit.Testing
             var result = _getValues.Calculate(table, hands).ToList();
             Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA &&
                           result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse + CardRankings.RankK &&
-                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush &&
+                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush + CardRankings.RankQ &&
                           result[3].Id == 3 && result[3].HandStrength == HandRankings.Straight + CardRankings.RankK);
         }
         [TestMethod]
@@ -230,7 +230,7 @@ namespace Unit.Testing
             var result = _getValues.Calculate(table, hands).ToList();
             Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA &&
                           result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse + CardRankings.RankK &&
-                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush &&
+                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush + CardRankings.RankQ &&
                           result[3].Id == 3 && result[3].HandStrength == HandRankings.Straight + CardRankings.RankK &&
                           result[4].Id == 4 && result[4].HandStrength == HandRankings.ThreeOfKind + CardRankings.RankQ);
         }
