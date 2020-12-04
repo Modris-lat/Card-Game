@@ -234,5 +234,25 @@ namespace Unit.Testing
                           result[3].Id == 3 && result[3].HandStrength == HandRankings.Straight + CardRankings.RankK &&
                           result[4].Id == 4 && result[4].HandStrength == HandRankings.ThreeOfKind + CardRankings.RankQ);
         }
+        [TestMethod]
+        public void Test_TwoPair_True()
+        {
+            var table = new List<Card>
+            {
+                new Card('8', 'c'),
+                new Card('T', 's'),
+                new Card('2', 's'),
+                new Card('Q', 'h'),
+                new Card('3', 'd')
+            };
+            var hands = new List<Hand>
+            {
+                new Hand(0, new List<Card> {new Card('3', 's'), new Card('8', 's')}),
+                new Hand(1, new List<Card> {new Card('T', 'c'), new Card('Q', 's')})
+            };
+            var result = _getValues.Calculate(table, hands).ToList();
+            Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.TwoPair + CardRankings.RankQ &&
+                          result[1].Id == 0 && result[1].HandStrength == HandRankings.TwoPair + CardRankings.Rank8);
+        }
     }
 }

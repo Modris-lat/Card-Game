@@ -24,7 +24,7 @@ namespace Engine.Services
                 if(hands[i].HandStrength == 0) 
                     hands[i].HandStrength = CheckStraightFlush.GetResult(handAndTableCards);
                 if (hands[i].HandStrength == 0 && equalRanksResult.FourOfKind)
-                    hands[i].HandStrength = HandRankings.FourOfAKind + equalRanksResult.FourOfKindValue;
+                    hands[i].HandStrength = equalRanksResult.FourOfKindValue;
                 if (hands[i].HandStrength == 0)
                     hands[i].HandStrength = CheckFullHouse.GetResult(handAndTableCards);
                 if (hands[i].HandStrength == 0)
@@ -37,7 +37,9 @@ namespace Engine.Services
                 if (hands[i].HandStrength == 0)
                     hands[i].HandStrength = CheckStraight.CheckIfStraight(handAndTableCards);
                 if (hands[i].HandStrength == 0 && equalRanksResult.ThreeOfKind)
-                    hands[i].HandStrength = equalRanksResult.ThreeOfKindValue + HandRankings.ThreeOfKind;
+                    hands[i].HandStrength = equalRanksResult.ThreeOfKindValue;
+                if (hands[i].HandStrength == 0 && equalRanksResult.PairCount == 2)
+                    hands[i].HandStrength = equalRanksResult.PairValue;
             }
 
             var handsOrderByValue = hands.OrderByDescending(h => h.HandStrength);
