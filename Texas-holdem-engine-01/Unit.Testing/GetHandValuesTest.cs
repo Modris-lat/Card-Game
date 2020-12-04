@@ -162,5 +162,27 @@ namespace Unit.Testing
             Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA &&
                           result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse + CardRankings.RankK);
         }
+        [TestMethod]
+        public void Test_Flush_True()
+        {
+            var table = new List<Card>
+            {
+                new Card('9', 's'),
+                new Card('T', 's'),
+                new Card('Q', 's'),
+                new Card('Q', 'h'),
+                new Card('Q', 'd')
+            };
+            var hands = new List<Hand>
+            {
+                new Hand(0, new List<Card> {new Card('3', 's'), new Card('8', 's')}),
+                new Hand(1, new List<Card> {new Card('A', 'c'), new Card('A', 's')}),
+                new Hand(2, new List<Card> {new Card('K', 'c'), new Card('K', 'd')})
+            };
+            var result = _getValues.Calculate(table, hands).ToList();
+            Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA &&
+                          result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse + CardRankings.RankK &&
+                          result[2].Id == 0 && result[2].HandStrength == HandRankings.Flush);
+        }
     }
 }

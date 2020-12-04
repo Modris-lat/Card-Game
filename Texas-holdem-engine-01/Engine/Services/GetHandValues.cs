@@ -27,7 +27,13 @@ namespace Engine.Services
                     hands[i].HandStrength = HandRankings.FourOfAKind + equalRanksResult.FourOfKindValue;
                 if (hands[i].HandStrength == 0)
                     hands[i].HandStrength = CheckFullHouse.GetResult(handAndTableCards);
-
+                if (hands[i].HandStrength == 0)
+                {
+                    var flush = CheckFlush.CheckIfFlush(handAndTableCards);
+                    if (flush != ' ')
+                        hands[i].HandStrength = HandRankings.Flush;
+                }
+                    
             }
 
             var handsOrderByValue = hands.OrderByDescending(h => h.HandStrength);
