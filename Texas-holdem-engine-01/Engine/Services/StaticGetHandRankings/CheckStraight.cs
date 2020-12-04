@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Engine.Models;
+using Engine.Rankings;
 
-namespace Engine.Services.StaticGetHandRankings.StaticGetValues.CheckStraight
+namespace Engine.Services.StaticGetHandRankings
 {
     public static class CheckStraight
     {
-        public static ReturnCheckStraightValues CheckIfStraight(List<Card> cardsList)
+        public static int CheckIfStraight(List<Card> cardsList)
         {
             var cards = cardsList;
             var cardValueList = new List<int>{};
-            var result = new ReturnCheckStraightValues();
             foreach (var card in cards)
             {
                 if (card.Rank == 'A')
@@ -35,9 +35,7 @@ namespace Engine.Services.StaticGetHandRankings.StaticGetValues.CheckStraight
                     straightValueList.Add(cardValueList[i+1]);
                     if (count == 4)
                     {
-                        result.Straight = true;
-                        result.StraightValue = straightValueList.Max();
-                        return result;
+                        return HandRankings.Straight + straightValueList.Max();
                     }
                 }
                 else if (sum == 0) { }
@@ -47,7 +45,7 @@ namespace Engine.Services.StaticGetHandRankings.StaticGetValues.CheckStraight
                     straightValueList.Clear();
                 }
             }
-            return result;
+            return 0;
         }
     }
 }

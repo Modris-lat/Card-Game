@@ -57,8 +57,7 @@
     <Compile Include="Services\StaticGetHandRankings\CheckFullHouse.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckStraightFlush.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckRoyalFlush.cs" />
-    <Compile Include="Services\StaticGetHandRankings\StaticGetValues\CheckStraight\CheckStraight.cs" />
-    <Compile Include="Services\StaticGetHandRankings\StaticGetValues\CheckStraight\ReturnCheckStraightValues.cs" />
+    <Compile Include="Services\StaticGetHandRankings\CheckStraight.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

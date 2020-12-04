@@ -3,7 +3,7 @@ using System.Linq;
 using Engine.Models;
 using Engine.Rankings;
 
-namespace Engine.Services.StaticGetHandRankings.StaticGetValues.CheckEqualRanks
+namespace Engine.Services.StaticGetHandRankings.CheckEqualRanks
 {
     public class CheckEqualRanks
     {

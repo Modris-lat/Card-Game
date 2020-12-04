@@ -7,7 +7,7 @@ using Engine.Interfaces;
 using Engine.Models;
 using Engine.Rankings;
 using Engine.Services.StaticGetHandRankings;
-using Engine.Services.StaticGetHandRankings.StaticGetValues.CheckEqualRanks;
+using Engine.Services.StaticGetHandRankings.CheckEqualRanks;
 
 namespace Engine.Services
 {
@@ -33,7 +33,9 @@ namespace Engine.Services
                     if (flush != ' ')
                         hands[i].HandStrength = HandRankings.Flush;
                 }
-                    
+
+                if (hands[i].HandStrength == 0)
+                    hands[i].HandStrength = CheckStraight.CheckIfStraight(handAndTableCards);
             }
 
             var handsOrderByValue = hands.OrderByDescending(h => h.HandStrength);
