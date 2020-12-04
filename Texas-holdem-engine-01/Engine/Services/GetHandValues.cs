@@ -38,8 +38,10 @@ namespace Engine.Services
                     hands[i].HandStrength = CheckStraight.CheckIfStraight(handAndTableCards);
                 if (hands[i].HandStrength == 0 && equalRanksResult.ThreeOfKind)
                     hands[i].HandStrength = equalRanksResult.ThreeOfKindValue;
-                if (hands[i].HandStrength == 0 && equalRanksResult.PairCount == 2)
+                if (hands[i].HandStrength == 0 && equalRanksResult.PairCount >= 1)
                     hands[i].HandStrength = equalRanksResult.PairValue;
+                if (hands[i].HandStrength == 0)
+                    hands[i].HandStrength = hands[i].Cards.Max(c => c.CardValue);
             }
 
             var handsOrderByValue = hands.OrderByDescending(h => h.HandStrength);

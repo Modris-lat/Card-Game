@@ -254,5 +254,49 @@ namespace Unit.Testing
             Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.TwoPair + CardRankings.RankQ &&
                           result[1].Id == 0 && result[1].HandStrength == HandRankings.TwoPair + CardRankings.Rank8);
         }
+        [TestMethod]
+        public void Test_TwoPair_VS_Pair()
+        {
+            var table = new List<Card>
+            {
+                new Card('8', 'c'),
+                new Card('T', 's'),
+                new Card('2', 's'),
+                new Card('Q', 'h'),
+                new Card('3', 'd')
+            };
+            var hands = new List<Hand>
+            {
+                new Hand(0, new List<Card> {new Card('3', 's'), new Card('8', 's')}),
+                new Hand(1, new List<Card> {new Card('T', 'c'), new Card('K', 's')})
+            };
+            var result = _getValues.Calculate(table, hands).ToList();
+            Assert.IsTrue(result[0].Id == 0 && result[0].HandStrength == HandRankings.TwoPair + CardRankings.Rank8 &&
+                          result[1].Id == 1 && result[1].HandStrength == HandRankings.Pair + CardRankings.RankT);
+        }
+        [TestMethod]
+        public void Test_HighestCard()
+        {
+            var table = new List<Card>
+            {
+                new Card('8', 'c'),
+                new Card('T', 's'),
+                new Card('2', 's'),
+                new Card('5', 'h'),
+                new Card('3', 'd')
+            };
+            var hands = new List<Hand>
+            {
+                new Hand(0, new List<Card> {new Card('J', 's'), new Card('A', 's')}),
+                new Hand(1, new List<Card> {new Card('J', 'c'), new Card('K', 's')}),
+                new Hand(2, new List<Card> {new Card('J', 'c'), new Card('Q', 's')}),
+                new Hand(3, new List<Card> {new Card('J', 'c'), new Card('6', 's')})
+            };
+            var result = _getValues.Calculate(table, hands).ToList();
+            Assert.IsTrue(result[0].Id == 0 && result[0].HandStrength == CardRankings.RankA &&
+                          result[1].Id == 1 && result[1].HandStrength == CardRankings.RankK &&
+                          result[2].Id == 2 && result[2].HandStrength == CardRankings.RankQ &&
+                          result[3].Id == 3 && result[3].HandStrength == CardRankings.RankJ);
+        }
     }
 }

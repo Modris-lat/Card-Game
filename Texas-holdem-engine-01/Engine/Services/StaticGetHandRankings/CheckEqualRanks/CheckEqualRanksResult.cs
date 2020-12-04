@@ -8,5 +8,7 @@
         public int ThreeOfKindValue { get; set; }
         public bool FourOfKind { get; set; }
         public int FourOfKindValue { get; set; }
+        public bool FullHouse { get; set; }
+        public int FullHouseValue { get; set; }
     }
 }
