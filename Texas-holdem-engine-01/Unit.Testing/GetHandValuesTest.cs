@@ -139,28 +139,28 @@ namespace Unit.Testing
                 new Hand(2, new List<Card> {new Card('9', 'h'), new Card('T', 'c')})
             };
             var result = _getValues.Calculate(table, hands).ToList();
-            Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse);
+            Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA);
         }
         [TestMethod]
         public void Test_FullHouse_VS_FullHouse()
         {
             var table = new List<Card>
             {
-                new Card('K', 'h'),
-                new Card('A', 'd'),
-                new Card('A', 's'),
+                new Card('8', 'h'),
+                new Card('T', 'd'),
+                new Card('Q', 's'),
                 new Card('Q', 'h'),
-                new Card('3', 'd')
+                new Card('Q', 'd')
             };
             var hands = new List<Hand>
             {
                 new Hand(0, new List<Card> {new Card('9', 's'), new Card('8', 's')}),
-                new Hand(1, new List<Card> {new Card('A', 'c'), new Card('K', 's')}),
-                new Hand(2, new List<Card> {new Card('A', 'h'), new Card('Q', 'c')})
+                new Hand(1, new List<Card> {new Card('A', 'c'), new Card('A', 's')}),
+                new Hand(2, new List<Card> {new Card('K', 'c'), new Card('K', 'd')})
             };
             var result = _getValues.Calculate(table, hands).ToList();
-            Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse &&
-                          result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse);
+            Assert.IsTrue(result[0].Id == 1 && result[0].HandStrength == HandRankings.FullHouse + CardRankings.RankA &&
+                          result[1].Id == 2 && result[1].HandStrength == HandRankings.FullHouse + CardRankings.RankK);
         }
     }
 }

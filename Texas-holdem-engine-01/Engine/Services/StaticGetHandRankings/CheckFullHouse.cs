@@ -15,23 +15,23 @@ namespace Engine.Services.StaticGetHandRankings
             var result = cards.GroupBy(c => c.Rank);
             var pair = false;
             var threeOfKind = false;
-            foreach (var item in result)
+            var highestCard = 0;
+            foreach (var group in result)
             {
-                if (item.Count() == 2)
+                if (group.Count() == 2)
                 {
-
                     pair = true;
+                    var value = group.ToList()[0].CardValue;
+                    if (value > highestCard) highestCard = value;
                 }
-
-                if (item.Count() == 3)
+                if (group.Count() == 3)
                 {
                     threeOfKind = true;
+                    var value = group.ToList()[0].CardValue;
+                    if (value > highestCard) highestCard = value;
                 }
 
-                if (pair && threeOfKind)
-                {
-                    return HandRankings.FullHouse;
-                }
+                if (pair && threeOfKind) return HandRankings.FullHouse + highestCard;
             }
             return 0;
         }
