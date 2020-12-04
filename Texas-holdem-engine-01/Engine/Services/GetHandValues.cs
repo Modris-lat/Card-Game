@@ -36,6 +36,8 @@ namespace Engine.Services
 
                 if (hands[i].HandStrength == 0)
                     hands[i].HandStrength = CheckStraight.CheckIfStraight(handAndTableCards);
+                if (hands[i].HandStrength == 0 && equalRanksResult.ThreeOfKind)
+                    hands[i].HandStrength = equalRanksResult.ThreeOfKindValue + HandRankings.ThreeOfKind;
             }
 
             var handsOrderByValue = hands.OrderByDescending(h => h.HandStrength);
