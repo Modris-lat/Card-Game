@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IGetOutputResponse.cs" />
+    <Compile Include="Models\Response.cs" />
     <Compile Include="Rankings\HandRankings.cs" />
     <Compile Include="Interfaces\IGetHandValues.cs" />
     <Compile Include="Interfaces\IGetCards.cs" />
@@ -51,6 +53,7 @@
     <Compile Include="Models\Hand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GetHandValues.cs" />
+    <Compile Include="Services\GetOutputResponse.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckEqualRanks\CheckEqualRanks.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckEqualRanks\CheckEqualRanksResult.cs" />
     <Compile Include="Services\StaticGetHandRankings\CheckFlush.cs" />

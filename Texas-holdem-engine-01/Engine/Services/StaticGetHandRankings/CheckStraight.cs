@@ -11,9 +11,10 @@ namespace Engine.Services.StaticGetHandRankings
         {
             var cards = cardsList;
             var cardValueList = new List<int>{};
+            var containsK = cardsList.Any(c => c.Rank == 'K');
             foreach (var card in cards)
             {
-                if (card.Rank == 'A')
+                if (card.Rank == 'A' && containsK == false)
                 {
                     cardValueList.Add(1);
                 }

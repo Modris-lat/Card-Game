@@ -33,6 +33,7 @@ namespace API.Service.DependencyResolution {
                 });
             For<IGetCards>().Use<GetCards>();
             For<IGetHandValues>().Use<GetHandValues>();
+            For<IGetOutputResponse>().Use<GetOutputResponse>();
         }
 
         #endregion

@@ -7,10 +7,13 @@ namespace API.Service.Models
     {
         protected readonly IGetCards _getCards;
         protected readonly IGetHandValues _getHandValues;
-        public BasicApiController(IGetCards getCards, IGetHandValues getHandValues)
+        protected readonly IGetOutputResponse _getResponse;
+        public BasicApiController(
+            IGetCards getCards, IGetHandValues getHandValues, IGetOutputResponse getResponse)
         {
             _getCards = getCards;
             _getHandValues = getHandValues;
+            _getResponse = getResponse;
         }
     }
 }

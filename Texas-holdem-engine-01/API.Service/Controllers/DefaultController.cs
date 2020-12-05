@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using API.Service.Models;
@@ -10,7 +11,9 @@ namespace API.Service.Controllers
 {
     public class DefaultController : BasicApiController
     {
-        public DefaultController(IGetCards getCards, IGetHandValues getHandValues): base(getCards, getHandValues) { }
+        public DefaultController(
+            IGetCards getCards, IGetHandValues getHandValues, IGetOutputResponse getResponse):
+            base(getCards, getHandValues, getResponse) { }
         [HttpPost, Route("api/cardgame/input")]
         public IHttpActionResult GameInput(GameInput input)
         {
@@ -19,9 +22,10 @@ namespace API.Service.Controllers
                 return BadRequest();
             }
 
-            var cardLists = _getCards.ConvertInput(input);
-            var getValues = _getHandValues.Calculate(cardLists.Item1, cardLists.Item2).ToList();
-            return Ok(getValues);
+            (List<Card>, List<Hand>) cardLists = _getCards.ConvertInput(input);
+            List<Hand> getValues = _getHandValues.Calculate(cardLists.Item1, cardLists.Item2).ToList();
+            IEnumerable<Response> getResponse = _getResponse.GetResponse(getValues);
+            return Ok(getResponse);
         }
     }
 }

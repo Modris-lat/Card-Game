@@ -298,5 +298,41 @@ namespace Unit.Testing
                           result[2].Id == 2 && result[2].HandStrength == CardRankings.RankQ &&
                           result[3].Id == 3 && result[3].HandStrength == CardRankings.RankJ);
         }
+        [TestMethod]
+        public void Test_Straight_RankA_Same_Value()
+        {
+            var table = new List<Card>
+            {
+                new Card('Q', 'c'),
+                new Card('T', 's'),
+                new Card('J', 's'),
+                new Card('5', 'h'),
+                new Card('3', 'd')
+            };
+            var hands = new List<Hand>
+            {
+                new Hand(0, new List<Card> {new Card('K', 's'), new Card('A', 's')}),
+            };
+            var result = _getValues.Calculate(table, hands).ToList();
+            Assert.IsTrue(result[0].Id == 0 && result[0].HandStrength == CardRankings.RankA + HandRankings.Straight);
+        }
+        [TestMethod]
+        public void Test_Straight_RankA_Value_Is_1()
+        {
+            var table = new List<Card>
+            {
+                new Card('Q', 'c'),
+                new Card('T', 's'),
+                new Card('4', 's'),
+                new Card('5', 'h'),
+                new Card('3', 'd')
+            };
+            var hands = new List<Hand>
+            {
+                new Hand(0, new List<Card> {new Card('2', 's'), new Card('A', 's')}),
+            };
+            var result = _getValues.Calculate(table, hands).ToList();
+            Assert.IsTrue(result[0].Id == 0 && result[0].HandStrength == CardRankings.Rank5 + HandRankings.Straight);
+        }
     }
 }
