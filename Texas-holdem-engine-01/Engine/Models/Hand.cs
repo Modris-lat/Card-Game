@@ -12,5 +12,6 @@ namespace Engine.Models
         public int Id { get; }
         public List<Card> Cards { get; }
         public int HandStrength { get; set; }
+        public string HandValueType { get; set; }
     }
 }

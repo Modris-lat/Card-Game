@@ -1,24 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Engine.Models
 {
     public class Response
     {
-        public Response(Hand hand, bool tie)
+        public Response(Hand hand)
         {
-            Tie = tie;
             Hand = GetCards(hand.Cards);
+            HandValue = hand.HandStrength;
+            HandValueType = hand.HandValueType;
         }
-        public string Hand { get; }
-        public bool Tie { get; }
+        public List<string> Hand { get; }
+        public int HandValue { get; }
+        public string HandValueType { get; }
 
-        string GetCards(List<Card> cards)
+        List<string> GetCards(List<Card> cards)
         {
-            return cards[0].Rank.ToString() + cards[0].Suit + cards[1].Rank + cards[1].Suit;
+            var cardList = new List<string>
+            {
+                cards[0].Rank.ToString() + cards[0].Suit,
+                cards[1].Rank.ToString() + cards[1].Suit
+            };
+            return  cardList;
         }
     }
 }
