@@ -12,13 +12,23 @@ export const PlayRoomPage = () => {
         "As", "Ah", "Ad", "Ac"
     ]
     const [round, setRound] = useState(0);
-    const [tableCards, setTableCards] = useState([]);
+    const [otherCards, setOtherCards] = useState([...deck])
+    const [tableCards, setTableCards] = useState<string[]>([]);
     const set = () => {
         setRound(round+1);
+        if(round === 1){
+            let resultTableCards: string[] = [];
+            for(let i=0; i<5; i++){
+                resultTableCards.push(otherCards[Math.floor(Math.random()*otherCards.length)]);
+            }
+            setTableCards([...resultTableCards]);
+        }
+        
     }
     return (
         <Box>
             <Typography variant="h5">PlayRoom round {round}</Typography>
+            <Typography variant="h6">Other cards: {otherCards}</Typography>
             <Button variant="contained"
             onClick={set}>
                 Go
