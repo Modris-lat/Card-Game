@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using API.Service.Models;
 using Engine.Interfaces;
 using Engine.Models;
@@ -8,6 +9,7 @@ using Engine.Models;
 
 namespace API.Service.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class DefaultController : BasicApiController
     {
         public DefaultController(

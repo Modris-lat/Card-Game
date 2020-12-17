@@ -8,6 +8,7 @@ namespace API.Service
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.EnableCors();
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
             // Web API routes

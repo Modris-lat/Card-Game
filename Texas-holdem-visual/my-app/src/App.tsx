@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
+import { PlayRoomPage } from './pages/PlayRoomPage';
 
 function App() {
   return (
-    <div>
-    </div>
+    <PlayRoomPage />
   );
 }
 

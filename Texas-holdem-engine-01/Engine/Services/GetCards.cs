@@ -2,7 +2,7 @@
 using Engine.Interfaces;
 using Engine.Models;
 
-namespace Engine
+namespace Engine.Services
 {
     public class GetCards : IGetCards
     {

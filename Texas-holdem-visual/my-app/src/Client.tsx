@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const Clients = {
+export const Client = {
     defaultClient : axios.create({
-        baseURL: "http://localhost:8090/api/cardgame"
+        baseURL: "http://localhost:8090/api/cardgame/input"
     })
 }

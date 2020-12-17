@@ -1,4 +1,4 @@
-﻿namespace Engine.Services.StaticGetHandRankings.CheckEqualRanks
+﻿namespace Engine.Models
 {
     public class CheckEqualRanksResult
     {
