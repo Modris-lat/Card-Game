@@ -13,10 +13,24 @@ export const PlayRoomPage = () => {
         "Js", "Jh", "Jd", "Jc", "Qs", "Qh", "Qd", "Qc", "Ks", "Kh", "Kd", "Kc",
         "As", "Ah", "Ad", "Ac"
     ]
+    const playerCount:number = 9;
     const [round, setRound] = useState(0);
     const [otherCards, setOtherCards] = useState([...deck])
     const [tableCards, setTableCards] = useState<string[]>([]);
+    const [playerCards, setPlayerCards] = useState<string[]>([]);
     const set = () => {
+        if(round === 0){
+            let resultOtherCards: string[] = [...otherCards];
+            let resultPlayerCards: string [] = [];
+            for(let i=0; i<playerCount*2; i++){
+                let result: string = resultOtherCards[Math.floor(Math.random()*resultOtherCards.length)];
+                resultPlayerCards.push(result);
+                let index: number = resultOtherCards.indexOf(result);
+                resultOtherCards.splice(index, 1);
+            }
+            setPlayerCards([...resultPlayerCards]);
+            setOtherCards([...resultOtherCards]);
+        }
         setRound(round+1);
         if(round === 1){
             let resultTableCards: string[] = [];
@@ -77,7 +91,7 @@ export const PlayRoomPage = () => {
                 Go
                 </Button>
             <Table cards={tableCards}/>
-            <Hands />
+            <Hands cards={playerCards}/>
         </Box>
     )
 }
