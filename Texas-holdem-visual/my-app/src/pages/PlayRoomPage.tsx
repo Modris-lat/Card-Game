@@ -21,7 +21,7 @@ export const PlayRoomPage = () => {
         if(round === 1){
             let resultTableCards: string[] = [];
             let resultOtherCards: string[] = [...otherCards];
-            for(let i=0; i<5; i++){
+            for(let i=0; i<3; i++){
                 let result: string = resultOtherCards[Math.floor(Math.random()*resultOtherCards.length)];
                 resultTableCards.push(result);
                 let index: number = resultOtherCards.indexOf(result);
@@ -30,7 +30,30 @@ export const PlayRoomPage = () => {
             setTableCards([...resultTableCards]);
             setOtherCards([...resultOtherCards]);
         }
-        
+        if(round === 2){
+            let resultTableCards: string[] = [...tableCards];
+            let resultOtherCards: string[] = [...otherCards];
+            for(let i=0; i<1; i++){
+                let result: string = resultOtherCards[Math.floor(Math.random()*resultOtherCards.length)];
+                resultTableCards.push(result);
+                let index: number = resultOtherCards.indexOf(result);
+                resultOtherCards.splice(index, 1);
+            }
+            setTableCards([...resultTableCards]);
+            setOtherCards([...resultOtherCards]);
+        }
+        if(round === 3){
+            let resultTableCards: string[] = [...tableCards];
+            let resultOtherCards: string[] = [...otherCards];
+            for(let i=0; i<1; i++){
+                let result: string = resultOtherCards[Math.floor(Math.random()*resultOtherCards.length)];
+                resultTableCards.push(result);
+                let index: number = resultOtherCards.indexOf(result);
+                resultOtherCards.splice(index, 1);
+            }
+            setTableCards([...resultTableCards]);
+            setOtherCards([...resultOtherCards]);
+        }
     }
     return (
         <Box>
