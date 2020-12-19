@@ -1,11 +1,8 @@
 import React, {useState} from "react";
-import { Box, Typography, Button, Avatar, Grid } from '@material-ui/core';
-import { Hands } from "../components/Hands";
-import { Table } from "../components/Table";
-import { makeStyles } from '@material-ui/core/styles';
+import { Box, Typography, Button } from '@material-ui/core';
+import {DisplayCards, Hands, Table} from "../components/index";
 
 export const PlayRoomPage = () => {
-    const classes = useStyles();
     const deck: string[] = [
         "2s", "2h", "2d", "2c", "3s", "3h", "3d", "3c", "4s", "4h", "4d", "4c",
         "5s", "5h", "5d", "5c", "6s", "6h", "6d", "6c", "7s", "7h", "7d", "7c",
@@ -73,19 +70,7 @@ export const PlayRoomPage = () => {
         <Box>
             <Typography variant="h5">PlayRoom round {round}</Typography>
             <Typography variant="h6">Cards deck</Typography>
-            <Grid 
-            container 
-            direction="row">
-                {otherCards.map((card, i)=>{
-                return (
-                <Grid key={i}>
-                    <Avatar variant="square"
-                     src={`/images/pngcards/c${card}.png`}
-                      alt={card}
-                      className={classes.size}/>
-                </Grid>
-                )
-            })}</Grid>
+            <DisplayCards cards={otherCards} />
             <Button variant="contained"
             onClick={set}>
                 Go
@@ -95,13 +80,3 @@ export const PlayRoomPage = () => {
         </Box>
     )
 }
-const useStyles = makeStyles((theme) => ({
-    size: {
-        height: 65,
-        width: 45,
-        border: "solid",
-        borderColor: "black",
-        borderWidth: "0.5px",
-        margin: "1px"
-    }
-  }));
