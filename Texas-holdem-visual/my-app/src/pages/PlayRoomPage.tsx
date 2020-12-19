@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { Box, Typography, Button } from '@material-ui/core';
-import {DisplayCards, Hands, Table} from "../components/index";
+import { Box, Typography } from '@material-ui/core';
+import {DisplayCards, Hands, Table, EventButton} from "../components/index";
 
 export const PlayRoomPage = () => {
     const deck: string[] = [
@@ -71,12 +71,9 @@ export const PlayRoomPage = () => {
             <Typography variant="h5">PlayRoom round {round}</Typography>
             <Typography variant="h6">Cards deck</Typography>
             <DisplayCards cards={otherCards} />
-            <Button variant="contained"
-            onClick={set}>
-                Go
-                </Button>
+            <EventButton set={set} />
             <Table cards={tableCards}/>
-            <Hands cards={playerCards}/>
+            <Hands cards={playerCards} table={tableCards}/>
         </Box>
     )
 }
