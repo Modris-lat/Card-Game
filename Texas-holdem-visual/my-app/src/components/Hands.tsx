@@ -2,8 +2,7 @@ import React from "react";
 import {Box, Grid, Typography} from "@material-ui/core";
 import { PlayerHand } from "./PlayerHand";
 import {HandValuesRequest} from "../api/handValuesRequest";
-import {Client} from "../Client";
-import { Hand } from "../api/hand";
+import { HandValues } from ".";
 
 export const Hands = (props: any) => {
     const cards: string[] = props.cards;
@@ -72,26 +71,22 @@ export const Hands = (props: any) => {
         player9Cards.push(cards[17]);
         hands.push(cards[16] + cards[17]);
     }
-    if(table.length >= 6){
-        const request = new HandValuesRequest(table, hands);
-        const response = Client.defaultClient.post<Hand[]>("", request);
-        console.log(request);
-    }
-    
+    const request = new HandValuesRequest(table, hands);
     return (
         <Box>
             <Typography variant="h6">Cards on hands</Typography>
             <Grid container>
-                <PlayerHand cards={player1Cards} name="player1" value={player1HandValue}/>
-                <PlayerHand cards={player2Cards} name="player2" value={player2HandValue}/>
-                <PlayerHand cards={player3Cards} name="player3" value={player3HandValue}/>
-                <PlayerHand cards={player4Cards} name="player4" value={player4HandValue}/>
-                <PlayerHand cards={player5Cards} name="player5" value={player5HandValue}/>
-                <PlayerHand cards={player6Cards} name="player6" value={player6HandValue}/>
-                <PlayerHand cards={player7Cards} name="player7" value={player7HandValue}/>
-                <PlayerHand cards={player8Cards} name="player8" value={player8HandValue}/>
-                <PlayerHand cards={player9Cards} name="player9" value={player9HandValue}/>
+                <PlayerHand cards={player1Cards} name="Player1" value={player1HandValue}/>
+                <PlayerHand cards={player2Cards} name="Player2" value={player2HandValue}/>
+                <PlayerHand cards={player3Cards} name="Player3" value={player3HandValue}/>
+                <PlayerHand cards={player4Cards} name="Player4" value={player4HandValue}/>
+                <PlayerHand cards={player5Cards} name="Player5" value={player5HandValue}/>
+                <PlayerHand cards={player6Cards} name="Player6" value={player6HandValue}/>
+                <PlayerHand cards={player7Cards} name="Player7" value={player7HandValue}/>
+                <PlayerHand cards={player8Cards} name="Player8" value={player8HandValue}/>
+                <PlayerHand cards={player9Cards} name="Player9" value={player9HandValue}/>
             </Grid>
+            <HandValues request={request} />
         </Box>
     )
 }

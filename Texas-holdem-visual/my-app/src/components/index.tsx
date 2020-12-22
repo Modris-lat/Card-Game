@@ -3,6 +3,6 @@ import {Hands} from "./Hands";
 import {Table} from "./Table";
 import {PlayerHand} from "./PlayerHand";
 import {EventButton} from "./EventButton";
-import {GetHandValues} from "./GetHandValues";
+import {HandValues} from "./HandValues";
 
-export {DisplayCards, Hands, Table, PlayerHand, EventButton, GetHandValues};
+export {DisplayCards, Hands, Table, PlayerHand, EventButton, HandValues};

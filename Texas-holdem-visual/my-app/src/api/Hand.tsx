@@ -1,5 +1,5 @@
 export interface Hand {
-    cards: string[],
+    hand: string[],
     handValue: number,
     handValueType: string
 }
