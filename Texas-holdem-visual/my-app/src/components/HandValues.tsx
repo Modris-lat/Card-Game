@@ -5,19 +5,18 @@ import { HandValuesRequest } from "../api/handValuesRequest";
 import { Hand } from "../api/hand";
 
 export const HandValues = ((props: any) => {
-    const req: HandValuesRequest = props.request;
+    const request: HandValuesRequest = props.request;
     const [values, setValues] = useState<Hand[]>([]);
     useEffect(() => {
         async function fetchData(){
-            let request = await Client.defaultClient.post<Hand[]>("", req);
-            console.log(request);
-            if(request.status === 200){
-                setValues([...request.data])
+            let response = await Client.defaultClient.post<Hand[]>("", request);
+            if(response.status === 200){
+                setValues([...response.data])
             }
-            return request;
+            return response;
         }
         fetchData();
-    }, [req]);
+    }, [request]);
     return (
         <Box>
             <Grid container>{values.map((hand, i) => {

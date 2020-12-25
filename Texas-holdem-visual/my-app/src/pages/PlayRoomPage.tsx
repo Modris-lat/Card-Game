@@ -72,7 +72,7 @@ export const PlayRoomPage = () => {
             <Typography variant="h6">Cards deck</Typography>
             <DisplayCards cards={otherCards} />
             <EventButton set={set} />
-            <Table cards={tableCards}/>
+            <Table table={tableCards} hands={playerCards}/>
             <Hands cards={playerCards} table={tableCards}/>
         </Box>
     )
