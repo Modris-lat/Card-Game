@@ -4,5 +4,6 @@ import {Table} from "./Table";
 import {PlayerHand} from "./PlayerHand";
 import {EventButton} from "./EventButton";
 import {HandValues} from "./HandValues";
+import {TableTitle} from "./TableTitle";
 
-export {DisplayCards, Hands, Table, PlayerHand, EventButton, HandValues};
+export {DisplayCards, Hands, Table, PlayerHand, EventButton, HandValues, TableTitle};
