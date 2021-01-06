@@ -64,13 +64,6 @@ export const Hands = (props: any) => {
         player8Cards.push(cards[15]);
         hands.push(cards[14] + cards[15]);
     }
-    const player9Cards: string[] = [];
-    let player9HandValue = 0;
-    if(cards.length > 16){
-        player9Cards.push(cards[16]);
-        player9Cards.push(cards[17]);
-        hands.push(cards[16] + cards[17]);
-    }
     const request = new HandValuesRequest(table, hands);
     return (
         <Box>
@@ -84,7 +77,6 @@ export const Hands = (props: any) => {
                 <PlayerHand cards={player6Cards} name="Player6" value={player6HandValue}/>
                 <PlayerHand cards={player7Cards} name="Player7" value={player7HandValue}/>
                 <PlayerHand cards={player8Cards} name="Player8" value={player8HandValue}/>
-                <PlayerHand cards={player9Cards} name="Player9" value={player9HandValue}/>
             </Grid>
             <HandValues request={request} />
         </Box>

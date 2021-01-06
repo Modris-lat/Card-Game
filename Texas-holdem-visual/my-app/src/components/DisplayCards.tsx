@@ -26,8 +26,8 @@ const useStyles = makeStyles(() => ({
         margin: "auto"
     },
     cards: {
-        height: 65,
-        width: 45,
+        height: 80,
+        width: 55,
         border: "solid",
         borderColor: "black",
         borderWidth: "0.5px",

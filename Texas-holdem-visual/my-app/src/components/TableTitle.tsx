@@ -5,17 +5,14 @@ import { makeStyles } from '@material-ui/core/styles';
 export const TableTitle = () => {
     const classes = useStyles();
     return (
-        <Box className={classes.container}>
-            <Typography variant="h3" className={classes.text}>TEXAS HOLD'M POKER</Typography>
+        <Box>
+            <Typography variant="h5" className={classes.text}>TEXAS HOLD'EM POKER</Typography>
         </Box>
     )
 };
 const useStyles = makeStyles(() => ({
     text:{
-        color: "white",
+        color: "rgba(255, 255, 0, 0.2)",
         fontWeight: "bold"
-    },
-    container: {
-        marging: "200px"
     }
 }));

@@ -10,7 +10,7 @@ export const PlayRoomPage = () => {
         "Js", "Jh", "Jd", "Jc", "Qs", "Qh", "Qd", "Qc", "Ks", "Kh", "Kd", "Kc",
         "As", "Ah", "Ad", "Ac"
     ]
-    const playerCount:number = 9;
+    const playerCount:number = 8;
     const [round, setRound] = useState(0);
     const [otherCards, setOtherCards] = useState([...deck])
     const [tableCards, setTableCards] = useState<string[]>([]);

@@ -1,18 +1,15 @@
 import React from "react";
 import {Box} from "@material-ui/core";
-import {DisplayCards, TableTitle} from "./index";
+import {DisplayCards} from "./index";
 import { makeStyles } from '@material-ui/core/styles';
 
 export const Table = (props: any) => {
     const classes = useStyles();
     return (
-        <Box className = {classes.table}>
-            <Box>
+        <Box className={classes.tableBorder}>
+            <Box className = {classes.table}>
                 <Box className = {classes.tableCards}>
                     <DisplayCards cards={props.table} />
-                </Box>
-                <Box className = {classes.tableTitle}>
-                    <TableTitle />
                 </Box>
             </Box>
         </Box>
@@ -20,33 +17,40 @@ export const Table = (props: any) => {
 };
 const useStyles = makeStyles(() => ({
     table: {
-        border: "solid",
-        borderWidth: "15px",
-        borderTopLeftRadius: "180px 50%",
-        borderBottomLeftRadius: "180px 50%",
-        borderBottomRightRadius: "180px 50%",
-        borderTopRightRadius: "180px 50%",
-        background: "#017525",
-        width: "1000px",
-        height: "500px",
+        border: "solid black 2px",
+        borderTopLeftRadius: "200px 50%",
+        borderBottomLeftRadius: "200px 50%",
+        borderBottomRightRadius: "200px 50%",
+        borderTopRightRadius: "200px 50%",
+        backgroundImage: "url(/images/table-background.jpg)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100%",
+        width: "850px",
+        height: "400px",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        margin: "auto"
     },
     tableCards: {
-        border: "solid white 1px",
-        height: "80px",
-        width: "245px",
-        margin: "20px",
+        height: "100px",
+        width: "300px",
+        margin: "auto",
         padding: "5px",
         display: "flex",
         alignItems: "center"
         
     },
-    tableTitle: {
+    tableBorder:{
+        backgroundImage: "url(/images/black-marble.jpg)",
+        backgroundSize: "100%",
+        width: "946px",
+        height: "480px",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "20px"
+        verticalAlign: "center",
+        borderTopLeftRadius: "215px 50%",
+        borderBottomLeftRadius: "215px 50%",
+        borderBottomRightRadius: "215px 50%",
+        borderTopRightRadius: "215px 50%",
     }
   }));
