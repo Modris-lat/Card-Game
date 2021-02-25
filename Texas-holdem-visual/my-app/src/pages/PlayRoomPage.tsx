@@ -1,15 +1,11 @@
 import React, {useState} from "react";
 import { Box, Typography } from '@material-ui/core';
 import {DisplayCards, Hands, Table, EventButton} from "../components/index";
+import {deck} from "../deck";
+import { makeStyles } from '@material-ui/core/styles';
 
 export const PlayRoomPage = () => {
-    const deck: string[] = [
-        "2s", "2h", "2d", "2c", "3s", "3h", "3d", "3c", "4s", "4h", "4d", "4c",
-        "5s", "5h", "5d", "5c", "6s", "6h", "6d", "6c", "7s", "7h", "7d", "7c",
-        "8s", "8h", "8d", "8c", "9s", "9h", "9d", "9c", "Ts", "Th", "Td", "Tc",
-        "Js", "Jh", "Jd", "Jc", "Qs", "Qh", "Qd", "Qc", "Ks", "Kh", "Kd", "Kc",
-        "As", "Ah", "Ad", "Ac"
-    ]
+    const classes = useStyles();
     const playerCount:number = 8;
     const [round, setRound] = useState(0);
     const [otherCards, setOtherCards] = useState([...deck])
@@ -69,11 +65,14 @@ export const PlayRoomPage = () => {
     return (
         <Box>
             <Typography variant="h5">PlayRoom round {round}</Typography>
-            <Typography variant="h6">Cards deck</Typography>
-            <DisplayCards cards={otherCards} />
             <EventButton set={set} />
             <Table table={tableCards} hands={playerCards}/>
             <Hands cards={playerCards} table={tableCards}/>
+            <Typography variant="h6">Cards deck</Typography>
+            <DisplayCards cards={otherCards} />
         </Box>
     )
 }
+const useStyles = makeStyles(() => ({
+    
+  }));
