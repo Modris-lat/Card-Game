@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API.Service", "API.Service\API.Service.csproj", "{B454B418-FDFB-4BDA-BE23-94E84974194C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiService", "API.Service\ApiService.csproj", "{B454B418-FDFB-4BDA-BE23-94E84974194C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{D4A3217E-4348-4974-B3B7-BB91D2A4F8A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Engine\Core.csproj", "{D4A3217E-4348-4974-B3B7-BB91D2A4F8A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit.Testing", "Unit.Testing\Unit.Testing.csproj", "{9EE0ABF5-3FF8-4C9B-9004-661319D6D0E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "Unit.Testing\UnitTests.csproj", "{9EE0ABF5-3FF8-4C9B-9004-661319D6D0E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

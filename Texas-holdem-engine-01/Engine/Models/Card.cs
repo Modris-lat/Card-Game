@@ -12,62 +12,52 @@ namespace Engine.Models
         {
             Rank = rank;
             Suit = suit;
-            SetCardValue();
+            SetCardValue(rank);
         }
 
-        void SetCardValue()
+        void SetCardValue(char rank)
         {
-            if (Rank == '2')
+            switch (rank)
             {
-                CardValue = CardRankings.Rank2;
-            }
-            else if (Rank == '3')
-            {
-                CardValue = CardRankings.Rank3;
-            }
-            else if (Rank == '4')
-            {
-                CardValue = CardRankings.Rank4;
-            }
-            else if (Rank == '5')
-            {
-                CardValue = CardRankings.Rank5;
-            }
-            else if (Rank == '6')
-            {
-                CardValue = CardRankings.Rank6;
-            }
-            else if (Rank == '7')
-            {
-                CardValue = CardRankings.Rank7;
-            }
-            else if (Rank == '8')
-            {
-                CardValue = CardRankings.Rank8;
-            }
-            else if (Rank == '9')
-            {
-                CardValue = CardRankings.Rank9;
-            }
-            else if (Rank == 'T')
-            {
-                CardValue = CardRankings.RankT;
-            }
-            else if (Rank == 'J')
-            {
-                CardValue = CardRankings.RankJ;
-            }
-            else if (Rank == 'Q')
-            {
-                CardValue = CardRankings.RankQ;
-            }
-            else if (Rank == 'K')
-            {
-                CardValue = CardRankings.RankK;
-            }
-            else if (Rank == 'A')
-            {
-                CardValue = CardRankings.RankA;
+                case '2':
+                    CardValue = CardRankings.Rank2;
+                    break;
+                case '3':
+                    CardValue = CardRankings.Rank3;
+                    break;
+                case '4':
+                    CardValue = CardRankings.Rank4;
+                    break;
+                case '5':
+                    CardValue = CardRankings.Rank5;
+                    break;
+                case '6':
+                    CardValue = CardRankings.Rank6;
+                    break;
+                case '7':
+                    CardValue = CardRankings.Rank7;
+                    break;
+                case '8':
+                    CardValue = CardRankings.Rank8;
+                    break;
+                case '9':
+                    CardValue = CardRankings.Rank9;
+                    break;
+                case 'T':
+                    CardValue = CardRankings.RankT;
+                    break;
+                case 'J':
+                    CardValue = CardRankings.RankJ;
+                    break;
+                case 'Q':
+                    CardValue = CardRankings.RankQ;
+                    break;
+                case 'K':
+                    CardValue = CardRankings.RankK;
+                    break;
+                case 'A':
+                    CardValue = CardRankings.RankA;
+                    break;
             }
         }
     }
